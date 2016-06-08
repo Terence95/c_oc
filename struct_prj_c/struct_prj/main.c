@@ -13,14 +13,14 @@
 #include <string.h>
 
 
-void initStu(stu* st){
-    if (st != NULL) {
-        st -> num_id = 10001;
-        st -> name = (char*)malloc(16*sizeof(char));
-        
-        strcpy(st->name, "terence");
-    }
-}
+//void initStu(stu* st){
+//    if (st != NULL) {
+//        st -> num_id = 10001;
+//        st -> name = (char*)malloc(16*sizeof(char));
+//
+//        strcpy(st->name, "terence");
+//    }
+//}
 
 void creatList(stu* head) {
     if (head != NULL) {
@@ -52,8 +52,8 @@ void creatList(stu* head) {
             }
             
             q = p;
-            p->next = NULL;
         }
+        p->next = NULL;
     }
 }
 
@@ -75,17 +75,17 @@ int main(int argc, const char * argv[]) {
     // 结构体定义的形式
     
     // 声明
-//    stu* st = (stu*)malloc(sizeof(stu));
-//    
-//    initStu(st);
-//    // printf("%lu\n", sizeof(st));
-//    printf("%d\n",  st->num_id);
-//    printf("%s",  st->name);
-//    
-//    // 要进行释放
-//    free(st);
-//    // 并且把st重置成NULL，防止野指针出现
-//    st = NULL;
+    //    stu* st = (stu*)malloc(sizeof(stu));
+    //
+    //    initStu(st);
+    //    // printf("%lu\n", sizeof(st));
+    //    printf("%d\n",  st->num_id);
+    //    printf("%s",  st->name);
+    //
+    //    // 要进行释放
+    //    free(st);
+    //    // 并且把st重置成NULL，防止野指针出现
+    //    st = NULL;
     
     
     
