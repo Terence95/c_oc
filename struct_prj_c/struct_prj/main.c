@@ -60,7 +60,12 @@ void creatList(stu* head) {
 void printStuInfo(stu* head){
     stu* next;
     next = head->next;
-    printf("学生信息");
+    printf("学生信息如下:\n");
+    while (next) {
+        printf("id：%d name:%s age:%d sex:%d address:%s", next->num_id, next->name, next->age, next->sex, next->address);
+        next = next->next;
+    }
+    printf("\n");
     
     
 }
