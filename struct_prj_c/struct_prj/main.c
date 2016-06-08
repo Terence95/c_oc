@@ -58,12 +58,12 @@ void creatList(stu* head) {
 }
 
 void printStuInfo(stu* head){
-    stu* next;
-    next = head->next;
+    stu* x;
     printf("学生信息如下:\n");
-    while (next) {
-        printf("id：%d name:%s age:%d sex:%d address:%s", next->num_id, next->name, next->age, next->sex, next->address);
-        next = next->next;
+    x = head->next;
+    while (x) {
+        printf("id：%d name:%s age:%d sex:%d address:%s", x->num_id, x->name,x->age,x->sex,x->address);
+        x = x->next;
     }
     printf("\n");
     
@@ -95,6 +95,7 @@ int main(int argc, const char * argv[]) {
     // 分配指针头空间
     head = (stu*)malloc(sizeof(stu));
     creatList(head);
+    printStuInfo(head);
     
     return 0;
 }
