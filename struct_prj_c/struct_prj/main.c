@@ -26,43 +26,43 @@ void creatList(stu* head) {
     if (head != NULL) {
         int i;
         int n;
-        stu *p,*q;
+        stu *current,*q;
         printf("输入学生人数：\n");
         scanf("%d", &n);
         for (i = 0; i < n; i++) {
             printf("输入第%d个学生信息:\n", i+1);
-            p = (stu*)malloc(sizeof(stu));
+            current = (stu*)malloc(sizeof(stu));
             printf("input num id:\n");
-            scanf("%d", &p->num_id);
+            scanf("%d", &current->num_id);
             printf("input name\n");
-            scanf("%s", &p->name);
+            scanf("%s", &current->name);
             printf("input age\n");
-            scanf("%d", &p->age);
+            scanf("%d", &current->age);
             printf("input sex\n");
-            scanf("%d", &p->sex);
+            scanf("%d", &current->sex);
             printf("input address:\n");
-            scanf("%s", &p->address);
+            scanf("%s", &current->address);
             printf("第%d个学生信息输入完成", i+1);
             printf("\n");
             
             if (0 == i) {
-                head->next = p;
+                printf("go in if\n");
+                head->next = current;
             }else{
-                q->next = p;
+                q->next = current;
             }
-            
-            q = p;
+            q = current;
         }
-        p->next = NULL;
+        current->next = NULL;
     }
 }
 
 void printStuInfo(stu* head){
     stu* x;
-    printf("学生信息如下:\n");
     x = head->next;
+    printf("学生信息如下:\n");
     while (x) {
-        printf("id：%d name:%s age:%d sex:%d address:%s", x->num_id, x->name,x->age,x->sex,x->address);
+        printf("id：%d name:%s age:%d sex:%d address:%s\n", x->num_id, x->name,x->age,x->sex,x->address);
         x = x->next;
     }
     printf("\n");
@@ -90,8 +90,7 @@ int main(int argc, const char * argv[]) {
     
     
     // start
-    stu* head = NULL;
-    stu* p;
+    stu *head = NULL;
     // 分配指针头空间
     head = (stu*)malloc(sizeof(stu));
     creatList(head);

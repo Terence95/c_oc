@@ -12,12 +12,12 @@
 // 定义学生结构体
 struct student{
     int num_id;
-    char* name;
+    char name[20];
     int age;
     int sex;
-    char* address;
+    char address[50];
     
-    struct student* next;
+    struct student *next;
 };
 // 定义一个typedef
 typedef struct student stu;
