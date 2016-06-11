@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+
 typedef struct student
 {
     int age;
@@ -9,6 +10,7 @@ typedef struct student
     char name[10];
     struct student *next;
 }st1;
+
 void create(st1 *head);//创建链表
 void print(st1* head);//打印链表
 st1* find(st1 *head,int index);//链表查找
