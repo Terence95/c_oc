@@ -12,16 +12,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-//void initStu(stu* st){
-//    if (st != NULL) {
-//        st -> num_id = 10001;
-//        st -> name = (char*)malloc(16*sizeof(char));
-//
-//        strcpy(st->name, "terence");
-//    }
-//}
-
 void createList(stu* head) {
     if (head != NULL) {
         int i;
@@ -46,7 +36,6 @@ void createList(stu* head) {
             printf("\n");
             
             if (0 == i) {
-                printf("go in if\n");
                 head->next = current;
             }else{
                 q->next = current;
@@ -88,7 +77,7 @@ stu* insert(stu* head) {
     stu *newstu,*p;
     int i = 1;
     int index;
-    printf("输入插入的index");
+    printf("输入插入的index\n");
     scanf("%d", &index);
     p = head->next;
     newstu = (stu*)malloc(sizeof(stu));
@@ -103,6 +92,7 @@ stu* insert(stu* head) {
     printf("input address:\n");
     scanf("%s", &newstu->address);
     printf("\nnew stu info input done");
+    printf("\n");
     
     if ( index == 1) {
         stu *temp = head->next;
@@ -123,6 +113,54 @@ stu* insert(stu* head) {
     
 }
 
+void delete(stu *head){
+    stu *p = NULL;
+    stu *temp = NULL;
+    int i = 1;
+    int index;
+    printf("Which student you want to delete, input index\n");
+    scanf("%d", &index);
+    
+    p = head->next;
+    if (1 == index) {
+        p = head->next;
+        head->next = p->next;
+        free(p);
+        p = NULL;
+    }else{
+        while (p) {
+            if (i == (index-1)) {
+                temp = p->next;
+                p->next = temp->next;
+                free(temp);
+            }
+            p = p->next;
+            i++;
+        }
+    }
+    printf("index %d has been delete\n", index);
+}
+
+void modify(stu *head){
+    stu *p = NULL;
+    int a;
+    printf("Which index you want to modify, input index\n");
+    scanf("%d",&a);
+    p = findStu(head, a);
+    printf("input num id:\n");
+    scanf("%d", &p->num_id);
+    printf("input name\n");
+    scanf("%s", &p->name);
+    printf("input age\n");
+    scanf("%d", &p->age);
+    printf("input sex\n");
+    scanf("%d", &p->sex);
+    printf("input address:\n");
+    scanf("%s", &p->address);
+    printf("\nindex %d modifded done\n", a);
+    
+}
+
 int main(int argc, const char * argv[]) {
     int a;//用于选择
     int index;
@@ -134,12 +172,11 @@ int main(int argc, const char * argv[]) {
     head = (stu*)malloc(sizeof(stu));
     do
     {
-        printf("***********链表操作************\n");
         printf("********请选择你的操作*********\n");
-        printf("1) 创建链表 2) 增加节点****\n");
-        printf("3) 删除节点 4) 改正节点****\n");
-        printf("5) 查找节点 6) 输出链表****\n");
-        printf("*********0) 退出系统***********\n");
+        printf("1) Create List 2) Add****\n");
+        printf("3) Delete      4) Change****\n");
+        printf("5) Find        6) Print****\n");
+        printf("********* 0) Exit***********\n");
         scanf( "%d",&a);
         if(0 == a){//用户选择9 就退出系统
             break;
@@ -148,6 +185,12 @@ int main(int argc, const char * argv[]) {
             switch (a) {
                 case 1:
                     createList(head);
+                    break;
+                case 2:
+                    insert(head);
+                    break;
+                case 3:
+                    delete(head);
                     break;
                 case 5:
                     printf("输入你要查找第几位学生:");
@@ -158,6 +201,9 @@ int main(int argc, const char * argv[]) {
                     }else{
                         printf("Empty List!\n\n");
                     }
+                    break;
+                case 4:
+                    modify(head);
                     break;
                 case 6://打印信息
                     printStuInfo(head);
