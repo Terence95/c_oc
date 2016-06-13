@@ -90,9 +90,29 @@ int main(int argc, const char * argv[]) {
         
         
         
+        // 6、设计程序，练习switch语句
+        int l = 1;
+        switch (l) {
+            case 1:
+                NSLog(@"l = %d", l);
+                break;
+            case 2:
+                NSLog(@"l = %d", l);
+                break;
+            default:
+                break;
+        }
         
-        
-        
+        // 7、设计程序，打印OC基本数据类型占用内存的大小
+        NSLog(@"7、------------------------------");
+        NSLog(@"sizeof int : %lu", sizeof(int));
+        NSLog(@"sizeof float: %lu", sizeof(float));
+        NSLog(@"sizeof double: %lu", sizeof(double));
+        NSLog(@"sizeof char: %lu", sizeof(char));
+        NSLog(@"sizeof id: %lu", sizeof(id));
+        NSLog(@"sizeof long: %lu", sizeof(long));
+        NSLog(@"sizeof short: %lu", sizeof(short));
+        NSLog(@"sizeof unsigned: %lu", sizeof(unsigned));
         
     }
     return 0;
