@@ -3,7 +3,7 @@
 //  struct_prj
 //  target: 标准使用结构体
 //  Created by 中软国际018 on 16/6/8.
-//  Copyright (c) 2016年 中软国际018. All rights reserved.
+//  Copyright (c) 2016年 TerenceAll rights reserved.
 //
 
 #include <stdio.h>
@@ -16,7 +16,8 @@ void createList(stu* head) {
     if (head != NULL) {
         int i;
         int n;
-        stu *current,*q;
+        stu *current = NULL;
+        stu *q = NULL;
         printf("输入学生人数：\n");
         scanf("%d", &n);
         for (i = 0; i < n; i++) {
@@ -25,13 +26,13 @@ void createList(stu* head) {
             printf("input num id:\n");
             scanf("%d", &current->num_id);
             printf("input name\n");
-            scanf("%s", &current->name);
+            scanf("%s", current->name);
             printf("input age\n");
             scanf("%d", &current->age);
             printf("input sex\n");
             scanf("%d", &current->sex);
             printf("input address:\n");
-            scanf("%s", &current->address);
+            scanf("%s", current->address);
             printf("第%d个学生信息输入完成", i+1);
             printf("\n");
             
@@ -42,6 +43,7 @@ void createList(stu* head) {
             }
             q = current;
         }
+        free(current);
         current->next = NULL;
     }
 }
@@ -84,13 +86,13 @@ stu* insert(stu* head) {
     printf("input num id:\n");
     scanf("%d", &newstu->num_id);
     printf("input name\n");
-    scanf("%s", &newstu->name);
+    scanf("%s", newstu->name);
     printf("input age\n");
     scanf("%d", &newstu->age);
     printf("input sex\n");
     scanf("%d", &newstu->sex);
     printf("input address:\n");
-    scanf("%s", &newstu->address);
+    scanf("%s", newstu->address);
     printf("\nnew stu info input done");
     printf("\n");
     
@@ -150,13 +152,13 @@ void modify(stu *head){
     printf("input num id:\n");
     scanf("%d", &p->num_id);
     printf("input name\n");
-    scanf("%s", &p->name);
+    scanf("%s", p->name);
     printf("input age\n");
     scanf("%d", &p->age);
     printf("input sex\n");
     scanf("%d", &p->sex);
     printf("input address:\n");
-    scanf("%s", &p->address);
+    scanf("%s", p->address);
     printf("\nindex %d modifded done\n", a);
     
 }
@@ -172,7 +174,7 @@ int main(int argc, const char * argv[]) {
     head = (stu*)malloc(sizeof(stu));
     do
     {
-        printf("********请选择你的操作*********\n");
+        printf("******** Operation *********\n");
         printf("1) Create List 2) Add****\n");
         printf("3) Delete      4) Change****\n");
         printf("5) Find        6) Print****\n");
