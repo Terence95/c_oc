@@ -18,10 +18,40 @@ int main(int argc, const char * argv[]) {
         range.location = 0;
         range.length = 5;
         
-        NSArray str_1 = [str deleteCharactersInRange:range];
-        NSLog(@"");
+        // 实例方法
+        NSArray *array = [[NSArray alloc] initWithObjects:@"a", @"b", @"c", @"c", nil];
         
-       
+        // 类方法数组创建
+        NSArray *array2 = [NSArray arrayWithObjects:@"OB1", @"OB2", nil];
+        
+        NSLog(@"%@", array);
+        NSLog(@"%@", array2);
+        
+        // 数组个数
+        NSLog(@"array count:%lu", (unsigned long)[array count]);
+        
+        
+        // 访问元素
+        NSLog(@"obj at index: %@", [array objectAtIndex:2]);
+        
+        
+        // 追加（返回新的array对象）
+        NSArray *array3 = [array arrayByAddingObject:@"d"];
+        NSLog(@"array3 : %@", array3);
+        
+        // 根据指定的字符串连接数组元素
+        NSString *joinstr = [array3 componentsJoinedByString:@"ter"];
+        NSLog(@"%@", joinstr);
+        
+        // 是否包含指定对象
+        // 包含则返回1，否则返回0
+        NSLog(@"IS CONTAIN : %d", [array containsObject:@"c"]);
+        
+        // 查找某个对象所在的索引
+        NSLog(@"indexofobj: %lu", (unsigned long)[array indexOfObject:@"c"]);
+        
+        
+        
     }
     return 0;
 }
