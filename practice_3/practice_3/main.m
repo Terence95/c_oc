@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
         range.length = 5;
         
         // 实例方法
-        NSArray *array = [[NSArray alloc] initWithObjects:@"a", @"b", @"c", @"c", nil];
+        NSArray *array = [[NSArray alloc] initWithObjects:@"a", @"b", @"c", @"d", nil];
         
         // 类方法数组创建
         NSArray *array2 = [NSArray arrayWithObjects:@"OB1", @"OB2", nil];
@@ -48,8 +48,15 @@ int main(int argc, const char * argv[]) {
         NSLog(@"IS CONTAIN : %d", [array containsObject:@"c"]);
         
         // 查找某个对象所在的索引
-        NSLog(@"indexofobj: %lu", (unsigned long)[array indexOfObject:@"c"]);
+        NSLog(@"indexofobj: %lu", (unsigned long)[array indexOfObject:@"a"]);
         
+        // 最后一个元素
+        NSLog(@"LastObj: %@", [array lastObject]);
+        
+        // 遍历数组
+        for (id element in array) {
+            NSLog(@"element: %@", element);
+        }
         
         
     }
