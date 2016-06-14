@@ -58,6 +58,9 @@ int main(int argc, const char * argv[]) {
             NSLog(@"element: %@", element);
         }
         
+        // array copy
+        NSMutableString *cpy_str = [array mutableCopy];
+        NSLog(@"%@", cpy_str);
         
     }
     return 0;
