@@ -11,47 +11,47 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // 创建字典
-        NSDictionary *dic1 = [NSDictionary dictionaryWithObject:@"vlaue1" forKey:@"key1"];
+        
+        // 字典初始化
+        NSNumber *numObj = [NSNumber numberWithInt:100];
+        
+        // 以一个元素初始化
+        NSDictionary *dic_1 = [NSDictionary dictionaryWithObjectsAndKeys:numObj,@"valueKey", nil];
+        NSLog(@"%@", dic_1);
         
         
-        // 对象方法创建
-        NSDictionary *_dic = [[NSDictionary alloc] initWithObjectsAndKeys:@"1", @"key1", @"2", @"key2", @"3", @"key3", nil];
+        // 初始化两个元素
+        NSDictionary *dic_2 = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"key1", @"2", @"key2", nil];
+        NSLog(@"%@", dic_2);
         
-        // 求字典大小
-        NSLog(@"%lu", (unsigned long)[_dic count]);
+        // c初始化新字典，新字典包含otherDic
+        NSDictionary *dic_3 = [NSDictionary dictionaryWithDictionary:dic_1];
+        NSLog(@"%@", dic_3);
         
-        //
-        NSArray *allkeys = [_dic allKeys];
-        NSArray *allvalues = [_dic allValues];
-        NSLog(@"all keys: %@", allkeys);
-        NSLog(@"all values: %@", allvalues);
+//        以文件内容初始化字典
         
+//        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
         
+        // 常用方法
+        // 获取字典数量
+        NSInteger count = [dic_2 count];
+        NSLog(@"%ld", (long)count);
         
-        // 创建可修改的字典
-        NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-        [mutableDict setObject:@"hello" forKey:NSDICTFORKEY];
+        // 通过key获取对应value
+        NSObject *valueObj = [dic_2 objectForKey:@"key1"];
+        NSLog(@"%@", valueObj);
         
-        // 创建多个字典
-        NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:
-                              @"value1", @"key1"
-                              @"value2", @"key2"
-                              @"vaule3", @"key3", nil];
-#if 0
-        NSEnumerator *enumeratorKey = [dic2 objectEnumerator];
-        // NSLog(@"%@", enumeratorKey);
-
-        // 快速枚举遍历所有key值
-        for (NSObject *obj in enumeratorKey) {
-            NSLog(@"遍历KEY值:%@", obj);
-        }
-#endif
+        // 将字典的key转成枚举对象，用于遍历
+        NSEnumerator *enumerator = [dic_2 keyEnumerator];
+//        NSLog(@"%@", enumerator);
         
-        // 通过key找到value
-        NSObject *obj = [_dic objectForKey:@"key2"];
-        NSLog(@"%@", obj);
+        // 获取所有键集合
+        NSArray *keys = [dic_2 allKeys];
+        NSLog(@"%@", keys);
         
+        // 获取所有value集合
+        NSArray *values = [dic_2 allValues];
+        NSLog(@"%@", values);
         
         // 字典的存在是为了解决在大量数据中查找方便，因为他通过key直接找到value，速度很快，避免一个个遍历造成的效率低下
         
