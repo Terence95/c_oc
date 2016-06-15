@@ -16,7 +16,7 @@
 
 例子：
 
-![Smaller icon](/c_oc/note/img/声明.png =500x)
+![Smaller icon](https://github.com/Terence95/c_oc/blob/master/note/img/%E5%A3%B0%E6%98%8E.png)
 
 	
 实现部分：实现行为及方法的实现(.m文件中)
