@@ -23,7 +23,7 @@
 
 例子：
 
-![Mou icon](./note/img/实现.png =500x)
+![Mou icon](./note/img/实现.png)
 	
 
 - ####类的成员变量
