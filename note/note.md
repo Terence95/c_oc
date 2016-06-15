@@ -23,7 +23,7 @@
 
 例子：
 
-![show1-2](/img/实现.png)
+![show1-2](https://github.com/Terence95/c_oc/blob/master/note/img/%E5%AE%9E%E7%8E%B0.png)
 	
 
 - ####类的成员变量
