@@ -16,14 +16,14 @@
 
 例子：
 
-![Mou icon](img/声明.png =500x)
+![Mou icon](/img/声明.png =500x)
 
 	
 实现部分：实现行为及方法的实现(.m文件中)
 
 例子：
 
-![Mou icon](img/实现.png =500x)
+![Mou icon](/img/实现.png =500x)
 	
 
 - ####类的成员变量
