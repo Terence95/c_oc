@@ -16,7 +16,7 @@
 	
 	`NSString+Extension.h`
 	
-		```
+		
 		//
 		//  NSString+Extension.h
 		//  practice_Category
@@ -33,7 +33,7 @@
 		-(NSString*)invertString:(NSString*)str;
 
 		@end	
-		```
+		
 	
 	可以知道类目的命名规则：类名+扩展方法，比如 `NSString+Helper`
 	
