@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dog.h"
 
 @interface Person : NSObject
+
+{
+    
+}
 
 @property(nonatomic, copy)NSString* name;
 @property(nonatomic, copy)NSString* dog;

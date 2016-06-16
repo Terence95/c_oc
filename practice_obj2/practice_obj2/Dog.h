@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Person.h"
 @interface Dog : NSObject
 
 @property(nonatomic, copy)NSString* dogname;
 @property(nonatomic, copy)NSString* color;
+
 
 -(void)run;
 -(void)getTheBall;
