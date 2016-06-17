@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Dog.h"
+
+//前置class声明
+@class Dog;
 
 @interface Person : NSObject
 
-{
-    
-}
-
 @property(nonatomic, copy)NSString* name;
 @property(nonatomic, copy)NSString* dog;
+@property(nonatomic, retain)Dog* puppy;
+
 
 -(void)walkTheDog:(int)time;
+
 @end

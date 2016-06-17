@@ -10,6 +10,16 @@
 
 @implementation Lamp
 
+-(instancetype)init{
+    self = [super init];
+    
+    if (self) {
+        _wattage = @"100w";
+    }
+    
+    return self;
+}
+
 -(void)light{
     NSLog(@"lamp light");
 }

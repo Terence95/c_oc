@@ -12,17 +12,26 @@
 
 @implementation Car
 
--(id)init:(Engine*)engine andLamp:(Lamp*)lamp{
+-(instancetype)init{
     self = [super init];
     if (self) {
+        _name = @"Audi A8";
+        _licence = @"8888";
+        _engine = [[Engine alloc] init];
+        _lamp = [[Lamp alloc] init];
         
     }
     return self;
 }
 
--(void)run:(Engine*)engine{
-    NSLog(@"car is running");
-    [engine turn];
+-(void)run{
+    [_engine turn];
+    [_lamp light];
+}
+
+-(void)stop{
+    [_engine stopTurn];
+    [_lamp dark];
 }
 
 @end

@@ -10,6 +10,16 @@
 
 @implementation Engine
 
+-(instancetype)init{
+    self = [super init];
+    
+    if (self) {
+        _model = @"Audi V8";
+        _capacity = @"3.0";
+    }
+    
+    return self;
+}
 
 -(void)turn{
     NSLog(@"engine turn");

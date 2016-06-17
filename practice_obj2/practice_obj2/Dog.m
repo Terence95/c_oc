@@ -10,7 +10,7 @@
 
 @implementation Dog
 
--(id)init{
+-(instancetype)init{
     self = [super init];
     if (self) {
         _dogname = @"Hary";
@@ -31,4 +31,7 @@
     NSLog(@"Bark!!");
 }
 
+-(void)dealloc{
+    [super dealloc];
+}
 @end

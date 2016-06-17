@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class Engine;
+@class Lamp;
+
 @interface Car : NSObject
+
 
 @property(nonatomic, copy)NSString* name;
 @property(nonatomic, copy)NSString* licence;
-@property(nonatomic, copy)NSString* engine;
-@property(nonatomic, copy)NSString* lamp;
+@property(nonatomic, retain)Engine* engine;
+@property(nonatomic, retain)Lamp* lamp;
+
 
 -(void)run;
 -(void)stop;

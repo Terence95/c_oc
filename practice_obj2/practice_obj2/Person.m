@@ -10,23 +10,34 @@
 #import "Dog.h"
 @implementation Person
 
--(id)init{
+-(instancetype)init{
     self = [super init];
     if (self) {
         _name = @"ter";
         _dog = @"Cibotium";
+        _puppy = [[Dog alloc] init];
     }
     return self;
 }
 
+//setter retain写法
+-(void)setPuppy:(Dog *)puppy{
+    if (_puppy != puppy) {
+        [_puppy release];
+        _puppy = [puppy retain];
+    }
+}
+
 -(void)walkTheDog:(int)time{
-    Dog *dog = [[Dog alloc] init];
-    if (time == 9) {
-        [dog run];
-    }else if(time == 10){
-        [dog getTheBall];
-    }else{
-        [dog bark];
+    
+    if (_puppy != nil) {
+        if (time == 9) {
+            [_puppy run];
+        }else if(time == 10){
+            [_puppy getTheBall];
+        }else{
+            [_puppy bark];
+        }
     }
 }
 
