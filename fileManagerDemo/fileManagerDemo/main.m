@@ -21,14 +21,17 @@ int main(int argc, const char * argv[]) {
         if (flag && err == nil) {
             NSArray *list = @[@"one", @"two", @"three"];
             [fm createFileWithFileName:TEST_LIST_PATH data:list];
+            NSLog(@"创建文件完成，路径是：%@", TEST_LIST_PATH);
         }
         
         
         // 写数据进文件
         NSArray *blist = @[@"1", @"2", @"3"];
         [fm writeDataToFile:TEST_LIST_PATH data:blist];
+        NSLog(@"数据录入完成");
         
         // 读数据
+        NSLog(@"data loading.............");
         NSLog(@"%@", [fm readFileWithName:TEST_LIST_PATH]);
         
         // 查看文件属性
