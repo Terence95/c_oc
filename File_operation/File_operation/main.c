@@ -30,15 +30,22 @@ void writeFile(){
 // read file
 void readFile(){
     FILE *fp = fopen(FILE_NAME, "wr");
-    
+    char str[128];
     if (fp != NULL) {
-        
+        while (!feof(fp)) {
+            if (fgets(str, 128, fp) != NULL) {
+                printf("%s", str);
+            }
+        }
     }else{
         printf("\nOpen File Failed!");
     }
+    
+    fclose(fp);
 }
 
 int main(int argc, const char * argv[]) {
-    writeFile();
+//    writeFile();
+    readFile();
     return 0;
 }

@@ -44,6 +44,13 @@ int main(int argc, const char * argv[]) {
         [car stop];
         [car release];
         NSLog(@"%p", car);
+        [car retain];
+        NSLog(@"%lu", [car retainCount]);
+        [car release];
+        NSLog(@"%lu", [car retainCount]);
+        [car release];
+        NSLog(@"%lu", [car retainCount]);
+        
 
         
     }

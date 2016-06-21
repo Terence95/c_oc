@@ -18,6 +18,8 @@
 
 @implementation FMManager
 
+
+// 单例把 FMManager 实例化了出来
 +(instancetype)shareInstance{
     // 声明静态实例对象
     static FMManager *instances = nil;
@@ -31,6 +33,8 @@
     return instances;
 }
 
+
+// fm 的get方法一定要写好，否则调用fm没用
 -(NSFileManager*)fm{
     if (_fm == nil) {
         _fm = [NSFileManager defaultManager];

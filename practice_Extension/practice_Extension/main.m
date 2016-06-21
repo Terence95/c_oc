@@ -13,6 +13,12 @@ int main(int argc, const char * argv[]) {
         Person *per = [[Person alloc] init];
         [per speak];
         [per useShowInfo];
+        
+        NSArray *array = [NSArray arrayWithObject:@"s"];
+        NSLog(@"%@", array[0]);
+        
+        
+        
     }
     return 0;
 }
