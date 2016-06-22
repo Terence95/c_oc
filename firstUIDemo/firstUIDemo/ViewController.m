@@ -71,6 +71,7 @@
         _changebtn = [[UIButton alloc] initWithFrame:CGRectMake(70, 200, 100, 44)];
         _changebtn.backgroundColor = [UIColor whiteColor];
         [_changebtn setTitle:@"change" forState:UIControlStateNormal];
+        [_changebtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _changebtn.layer.cornerRadius = 5.f;
         [_changebtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         _changebtn.tag = 1000;
@@ -82,9 +83,9 @@
     if (_canclebtn == nil) {
         _canclebtn = [[UIButton alloc] initWithFrame:CGRectMake(70, 250, 100, 44)];
         _canclebtn.backgroundColor = [UIColor whiteColor];
-        [_canclebtn setTitle:@"change" forState:UIControlStateNormal];
+        [_canclebtn setTitle:@"cancle" forState:UIControlStateNormal];
+        [_canclebtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _canclebtn.layer.cornerRadius = 5.f;
-        
         [_canclebtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
        _canclebtn.tag = 2000;
     }
