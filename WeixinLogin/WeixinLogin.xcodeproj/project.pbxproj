@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0027026C1D1BB4BC008D394B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027026B1D1BB4BC008D394B /* main.m */; };
+		0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027026E1D1BB4BC008D394B /* AppDelegate.m */; };
+		002702721D1BB4BC008D394B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702711D1BB4BC008D394B /* ViewController.m */; };
+		002702751D1BB4BC008D394B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002702731D1BB4BC008D394B /* Main.storyboard */; };
+		002702771D1BB4BC008D394B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002702761D1BB4BC008D394B /* Assets.xcassets */; };
+		0027027A1D1BB4BC008D394B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002702781D1BB4BC008D394B /* LaunchScreen.storyboard */; };
+		002702851D1BB4BC008D394B /* WeixinLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702841D1BB4BC008D394B /* WeixinLoginTests.m */; };
+		002702901D1BB4BC008D394B /* WeixinLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027028F1D1BB4BC008D394B /* WeixinLoginUITests.m */; };
+		002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702A31D1BB57E008D394B /* WXLoginViewController.m */; };
+		002702A81D1BC7D5008D394B /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 002702A71D1BC7D5008D394B /* img.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		002702811D1BB4BC008D394B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0027025F1D1BB4BC008D394B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 002702661D1BB4BC008D394B;
+			remoteInfo = WeixinLogin;
+		};
+		0027028C1D1BB4BC008D394B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0027025F1D1BB4BC008D394B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 002702661D1BB4BC008D394B;
+			remoteInfo = WeixinLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002702671D1BB4BC008D394B /* WeixinLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeixinLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0027026B1D1BB4BC008D394B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0027026D1D1BB4BC008D394B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0027026E1D1BB4BC008D394B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		002702701D1BB4BC008D394B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		002702711D1BB4BC008D394B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		002702741D1BB4BC008D394B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		002702761D1BB4BC008D394B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		002702791D1BB4BC008D394B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0027027B1D1BB4BC008D394B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002702801D1BB4BC008D394B /* WeixinLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeixinLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		002702841D1BB4BC008D394B /* WeixinLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeixinLoginTests.m; sourceTree = "<group>"; };
+		002702861D1BB4BC008D394B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0027028B1D1BB4BC008D394B /* WeixinLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeixinLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0027028F1D1BB4BC008D394B /* WeixinLoginUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeixinLoginUITests.m; sourceTree = "<group>"; };
+		002702911D1BB4BC008D394B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002702A21D1BB57E008D394B /* WXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLoginViewController.h; sourceTree = "<group>"; };
+		002702A31D1BB57E008D394B /* WXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXLoginViewController.m; sourceTree = "<group>"; };
+		002702A51D1BBE2F008D394B /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		002702A71D1BC7D5008D394B /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		002702641D1BB4BC008D394B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0027027D1D1BB4BC008D394B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002702881D1BB4BC008D394B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0027025E1D1BB4BC008D394B = {
+			isa = PBXGroup;
+			children = (
+				002702A61D1BC7D5008D394B /* Resources */,
+				0027029D1D1BB54D008D394B /* Class */,
+				002702691D1BB4BC008D394B /* WeixinLogin */,
+				002702831D1BB4BC008D394B /* WeixinLoginTests */,
+				0027028E1D1BB4BC008D394B /* WeixinLoginUITests */,
+				002702681D1BB4BC008D394B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		002702681D1BB4BC008D394B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002702671D1BB4BC008D394B /* WeixinLogin.app */,
+				002702801D1BB4BC008D394B /* WeixinLoginTests.xctest */,
+				0027028B1D1BB4BC008D394B /* WeixinLoginUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		002702691D1BB4BC008D394B /* WeixinLogin */ = {
+			isa = PBXGroup;
+			children = (
+				0027026D1D1BB4BC008D394B /* AppDelegate.h */,
+				0027026E1D1BB4BC008D394B /* AppDelegate.m */,
+				002702701D1BB4BC008D394B /* ViewController.h */,
+				002702711D1BB4BC008D394B /* ViewController.m */,
+				002702731D1BB4BC008D394B /* Main.storyboard */,
+				002702761D1BB4BC008D394B /* Assets.xcassets */,
+				002702781D1BB4BC008D394B /* LaunchScreen.storyboard */,
+				0027027B1D1BB4BC008D394B /* Info.plist */,
+				0027026A1D1BB4BC008D394B /* Supporting Files */,
+			);
+			path = WeixinLogin;
+			sourceTree = "<group>";
+		};
+		0027026A1D1BB4BC008D394B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0027026B1D1BB4BC008D394B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		002702831D1BB4BC008D394B /* WeixinLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				002702841D1BB4BC008D394B /* WeixinLoginTests.m */,
+				002702861D1BB4BC008D394B /* Info.plist */,
+			);
+			path = WeixinLoginTests;
+			sourceTree = "<group>";
+		};
+		0027028E1D1BB4BC008D394B /* WeixinLoginUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0027028F1D1BB4BC008D394B /* WeixinLoginUITests.m */,
+				002702911D1BB4BC008D394B /* Info.plist */,
+			);
+			path = WeixinLoginUITests;
+			sourceTree = "<group>";
+		};
+		0027029D1D1BB54D008D394B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0027029E1D1BB54D008D394B /* Common */,
+				0027029F1D1BB54D008D394B /* UIViewControllers */,
+				002702A01D1BB54D008D394B /* UIViews */,
+				002702A11D1BB54D008D394B /* UIViewSubControllers */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		0027029E1D1BB54D008D394B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				002702A51D1BBE2F008D394B /* Common.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0027029F1D1BB54D008D394B /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				002702A21D1BB57E008D394B /* WXLoginViewController.h */,
+				002702A31D1BB57E008D394B /* WXLoginViewController.m */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		002702A01D1BB54D008D394B /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		002702A11D1BB54D008D394B /* UIViewSubControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViewSubControllers;
+			sourceTree = "<group>";
+		};
+		002702A61D1BC7D5008D394B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				002702A71D1BC7D5008D394B /* img.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		002702661D1BB4BC008D394B /* WeixinLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002702941D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLogin" */;
+			buildPhases = (
+				002702631D1BB4BC008D394B /* Sources */,
+				002702641D1BB4BC008D394B /* Frameworks */,
+				002702651D1BB4BC008D394B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeixinLogin;
+			productName = WeixinLogin;
+			productReference = 002702671D1BB4BC008D394B /* WeixinLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0027027F1D1BB4BC008D394B /* WeixinLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002702971D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLoginTests" */;
+			buildPhases = (
+				0027027C1D1BB4BC008D394B /* Sources */,
+				0027027D1D1BB4BC008D394B /* Frameworks */,
+				0027027E1D1BB4BC008D394B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				002702821D1BB4BC008D394B /* PBXTargetDependency */,
+			);
+			name = WeixinLoginTests;
+			productName = WeixinLoginTests;
+			productReference = 002702801D1BB4BC008D394B /* WeixinLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0027028A1D1BB4BC008D394B /* WeixinLoginUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0027029A1D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLoginUITests" */;
+			buildPhases = (
+				002702871D1BB4BC008D394B /* Sources */,
+				002702881D1BB4BC008D394B /* Frameworks */,
+				002702891D1BB4BC008D394B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0027028D1D1BB4BC008D394B /* PBXTargetDependency */,
+			);
+			name = WeixinLoginUITests;
+			productName = WeixinLoginUITests;
+			productReference = 0027028B1D1BB4BC008D394B /* WeixinLoginUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0027025F1D1BB4BC008D394B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Terence;
+				TargetAttributes = {
+					002702661D1BB4BC008D394B = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 243F47H446;
+					};
+					0027027F1D1BB4BC008D394B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 002702661D1BB4BC008D394B;
+					};
+					0027028A1D1BB4BC008D394B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 002702661D1BB4BC008D394B;
+					};
+				};
+			};
+			buildConfigurationList = 002702621D1BB4BC008D394B /* Build configuration list for PBXProject "WeixinLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0027025E1D1BB4BC008D394B;
+			productRefGroup = 002702681D1BB4BC008D394B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				002702661D1BB4BC008D394B /* WeixinLogin */,
+				0027027F1D1BB4BC008D394B /* WeixinLoginTests */,
+				0027028A1D1BB4BC008D394B /* WeixinLoginUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		002702651D1BB4BC008D394B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0027027A1D1BB4BC008D394B /* LaunchScreen.storyboard in Resources */,
+				002702771D1BB4BC008D394B /* Assets.xcassets in Resources */,
+				002702751D1BB4BC008D394B /* Main.storyboard in Resources */,
+				002702A81D1BC7D5008D394B /* img.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0027027E1D1BB4BC008D394B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002702891D1BB4BC008D394B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		002702631D1BB4BC008D394B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002702721D1BB4BC008D394B /* ViewController.m in Sources */,
+				002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */,
+				0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */,
+				0027026C1D1BB4BC008D394B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0027027C1D1BB4BC008D394B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002702851D1BB4BC008D394B /* WeixinLoginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002702871D1BB4BC008D394B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002702901D1BB4BC008D394B /* WeixinLoginUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		002702821D1BB4BC008D394B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 002702661D1BB4BC008D394B /* WeixinLogin */;
+			targetProxy = 002702811D1BB4BC008D394B /* PBXContainerItemProxy */;
+		};
+		0027028D1D1BB4BC008D394B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 002702661D1BB4BC008D394B /* WeixinLogin */;
+			targetProxy = 0027028C1D1BB4BC008D394B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		002702731D1BB4BC008D394B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				002702741D1BB4BC008D394B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		002702781D1BB4BC008D394B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				002702791D1BB4BC008D394B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		002702921D1BB4BC008D394B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		002702931D1BB4BC008D394B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		002702951D1BB4BC008D394B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = WeixinLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ter.WeixinLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		002702961D1BB4BC008D394B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = WeixinLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ter.WeixinLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		002702981D1BB4BC008D394B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WeixinLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ter.WeixinLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeixinLogin.app/WeixinLogin";
+			};
+			name = Debug;
+		};
+		002702991D1BB4BC008D394B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WeixinLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ter.WeixinLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeixinLogin.app/WeixinLogin";
+			};
+			name = Release;
+		};
+		0027029B1D1BB4BC008D394B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WeixinLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ter.WeixinLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WeixinLogin;
+			};
+			name = Debug;
+		};
+		0027029C1D1BB4BC008D394B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WeixinLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ter.WeixinLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WeixinLogin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		002702621D1BB4BC008D394B /* Build configuration list for PBXProject "WeixinLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002702921D1BB4BC008D394B /* Debug */,
+				002702931D1BB4BC008D394B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002702941D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002702951D1BB4BC008D394B /* Debug */,
+				002702961D1BB4BC008D394B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		002702971D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002702981D1BB4BC008D394B /* Debug */,
+				002702991D1BB4BC008D394B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0027029A1D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLoginUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0027029B1D1BB4BC008D394B /* Debug */,
+				0027029C1D1BB4BC008D394B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0027025F1D1BB4BC008D394B /* Project object */;
+}
