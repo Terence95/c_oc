@@ -17,6 +17,7 @@
 @property(nonatomic, strong)UIView* line;
 @property(nonatomic, strong)UIButton* question;
 @property(nonatomic, strong)UILabel* usernamelabel;
+@property(nonatomic, strong)UIButton* morebtn;
 
 
 @end
@@ -43,6 +44,7 @@
     [self.view addSubview:self.perlogo];
     [self.view addSubview:self.usernamelabel];
     [self.view addSubview:self.question];
+    [self.view addSubview:self.morebtn];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -106,6 +108,7 @@
     if (_perlogo == nil) {
         _perlogo = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-70)/2, 90, 70, 70)];
         _perlogo.backgroundColor = [UIColor colorWithRed:0.974 green:0.374 blue:0.459 alpha:1];
+        [_perlogo setImage:[UIImage imageNamed:@"img.png"]];
     }
     return _perlogo;
 }
@@ -126,12 +129,23 @@
         [_question setTitle:@"登录遇到问题？" forState:UIControlStateNormal];
         //        96 117 152
         _question.backgroundColor = [UIColor clearColor];
-        [_question setTitleColor:[UIColor colorWithRed:0.438 green:0.238 blue:0.664 alpha:1] forState:UIControlStateNormal];
+        [_question setTitleColor:[UIColor colorWithRed:0.306 green:0.506 blue:0.532 alpha:1] forState:UIControlStateNormal];
         [_question setFont:[UIFont systemFontOfSize:14.f]];
         
         
     }
     return _question;
+}
+
+-(UIButton*)morebtn{
+    if (_morebtn == nil) {
+        _morebtn = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-100)/2, CGRectGetMaxY(self.question.frame)+110, 100, 40)];
+        [_morebtn setTitle:@"更多" forState:UIControlStateNormal];
+        [_morebtn setTitleColor:[UIColor colorWithRed:0.306 green:0.506 blue:0.532 alpha:1] forState:UIControlStateNormal];
+        [_morebtn setFont:[UIFont systemFontOfSize:14.f]];
+    }
+    
+    return _morebtn;
 }
 
 
