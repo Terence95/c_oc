@@ -17,6 +17,7 @@
 		002702901D1BB4BC008D394B /* WeixinLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027028F1D1BB4BC008D394B /* WeixinLoginUITests.m */; };
 		002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702A31D1BB57E008D394B /* WXLoginViewController.m */; };
 		002702A81D1BC7D5008D394B /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 002702A71D1BC7D5008D394B /* img.png */; };
+		002702AB1D1BD79C008D394B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702AA1D1BD79C008D394B /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		002702A31D1BB57E008D394B /* WXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXLoginViewController.m; sourceTree = "<group>"; };
 		002702A51D1BBE2F008D394B /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		002702A71D1BC7D5008D394B /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
+		002702A91D1BD79C008D394B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		002702AA1D1BD79C008D394B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 			children = (
 				002702A21D1BB57E008D394B /* WXLoginViewController.h */,
 				002702A31D1BB57E008D394B /* WXLoginViewController.m */,
+				002702A91D1BD79C008D394B /* SecondViewController.h */,
+				002702AA1D1BD79C008D394B /* SecondViewController.m */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002702AB1D1BD79C008D394B /* SecondViewController.m in Sources */,
 				002702721D1BB4BC008D394B /* ViewController.m in Sources */,
 				002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */,
 				0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */,

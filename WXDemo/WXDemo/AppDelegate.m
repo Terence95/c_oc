@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  WeixinLogin
+//  WXDemo
 //
 //  Created by Terence on 16/6/23.
 //  Copyright © 2016年 Terence. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "WXLoginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,20 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
-    WXLoginViewController* wxvc = [[WXLoginViewController alloc]init];
-    
-    // 创建导航控制器
-    
-    UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:wxvc];
-    
-    self.window.rootViewController = navi;
-    
-    [self.window makeKeyAndVisible];
-    
+    (NSDictionary *) launchOptions{
+        
+    }
     
     return YES;
 }

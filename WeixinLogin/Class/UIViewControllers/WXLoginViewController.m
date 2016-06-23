@@ -8,6 +8,7 @@
 
 #import "WXLoginViewController.h"
 #import "Common.h"
+#import "SecondViewController.h"
 @interface WXLoginViewController ()
 
 @property(nonatomic, strong)UITextField* passwordtext;
@@ -18,7 +19,7 @@
 @property(nonatomic, strong)UIButton* question;
 @property(nonatomic, strong)UILabel* usernamelabel;
 @property(nonatomic, strong)UIButton* morebtn;
-
+//@property(nonatomic, strong)SecondViewController* sec;
 
 @end
 
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"WeChat";
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -49,16 +51,18 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    self.title = @"wechat";
 }
 
 
 -(UITextField*)passwordtext{
     if (_passwordtext == nil) {
-        _passwordtext = [[UITextField alloc] initWithFrame:CGRectMake(30, 250, 250, 30)];
+        _passwordtext = [[UITextField alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-240), 250, 200, 30)];
 //        _passwordtext.backgroundColor = [UIColor redColor];
         _passwordtext.placeholder = @"请填写密码";
         [_passwordtext setFont:[UIFont systemFontOfSize:14.f]];
         _passwordtext.textAlignment = NSTextAlignmentCenter;
+        [_passwordtext setSecureTextEntry:YES];
         
     }
     return _passwordtext;
@@ -66,7 +70,7 @@
 
 -(UILabel*)passwordlabel{
     if (_passwordlabel == nil) {
-        _passwordlabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 250, 50, 30)];
+        _passwordlabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-270)/2, 250, 50, 30)];
 //        _passwordlabel.backgroundColor = [UIColor blueColor];
         _passwordlabel.text = @"密码:";
         [_passwordlabel setFont:[UIFont systemFontOfSize:15.f]];
@@ -79,16 +83,18 @@
 
 -(UIButton*)loginbtn{
     if (_loginbtn == nil) {
-        _loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(35, 310, 250, 40)];
+        _loginbtn = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-270)/2, 310, 270, 40)];
 //        _loginbtn.backgroundColor = [UIColor colorWithRed:114f green:221f blue:61f alpha:0];
 //        _loginbtn.backgroundColor = [UIColor orangeColor];
         
         _loginbtn.backgroundColor = [UIColor colorWithRed:0.456 green:0.870 blue:0.243 alpha:1];
         [_loginbtn setTitle:@"登 入" forState:UIControlStateNormal];
         _loginbtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        
         [_loginbtn.titleLabel setFont:[UIFont systemFontOfSize:17.f]];
         _loginbtn.layer.cornerRadius = 4.f;
+        [_loginbtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        _loginbtn.tag = 3000;
+        
         
         
     }
@@ -146,6 +152,31 @@
     }
     
     return _morebtn;
+}
+
+//-(SecondViewController*)sec{
+//    if (_sec == nil) {
+//        _sec = [[SecondViewController alloc] init];
+//    }
+//    return _sec;
+//}
+
+//button的点击事件
+-(void)btnClicked:(id)sender{
+    if (sender && [sender isKindOfClass:[UIButton class]]) {
+        UIButton *btn = (UIButton*)sender;
+        switch (btn.tag) {
+            case 3000:
+                NSLog(@"i have been clicked");
+                [self.navigationController pushViewController:[SecondViewController alloc] animated:YES];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
+    }
 }
 
 
