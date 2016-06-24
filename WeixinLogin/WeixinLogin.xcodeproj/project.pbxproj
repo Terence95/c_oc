@@ -18,6 +18,10 @@
 		002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702A31D1BB57E008D394B /* WXLoginViewController.m */; };
 		002702A81D1BC7D5008D394B /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 002702A71D1BC7D5008D394B /* img.png */; };
 		002702AB1D1BD79C008D394B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702AA1D1BD79C008D394B /* SecondViewController.m */; };
+		002702EF1D1C3471008D394B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702EE1D1C3471008D394B /* HomeViewController.m */; };
+		002702F31D1CB565008D394B /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 002702F01D1CB565008D394B /* AppIcon60x60@2x.png */; };
+		002702F41D1CB565008D394B /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 002702F11D1CB565008D394B /* AppIcon60x60@3x.png */; };
+		002702F51D1CB565008D394B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 002702F21D1CB565008D394B /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,11 @@
 		002702A71D1BC7D5008D394B /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 		002702A91D1BD79C008D394B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		002702AA1D1BD79C008D394B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		002702ED1D1C3471008D394B /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		002702EE1D1C3471008D394B /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		002702F01D1CB565008D394B /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		002702F11D1CB565008D394B /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
+		002702F21D1CB565008D394B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +186,8 @@
 				002702A31D1BB57E008D394B /* WXLoginViewController.m */,
 				002702A91D1BD79C008D394B /* SecondViewController.h */,
 				002702AA1D1BD79C008D394B /* SecondViewController.m */,
+				002702ED1D1C3471008D394B /* HomeViewController.h */,
+				002702EE1D1C3471008D394B /* HomeViewController.m */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +209,9 @@
 		002702A61D1BC7D5008D394B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				002702F21D1CB565008D394B /* Icon@2x.png */,
+				002702F01D1CB565008D394B /* AppIcon60x60@2x.png */,
+				002702F11D1CB565008D394B /* AppIcon60x60@3x.png */,
 				002702A71D1BC7D5008D394B /* img.png */,
 			);
 			path = Resources;
@@ -307,6 +321,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002702F31D1CB565008D394B /* AppIcon60x60@2x.png in Resources */,
+				002702F41D1CB565008D394B /* AppIcon60x60@3x.png in Resources */,
+				002702F51D1CB565008D394B /* Icon@2x.png in Resources */,
 				0027027A1D1BB4BC008D394B /* LaunchScreen.storyboard in Resources */,
 				002702771D1BB4BC008D394B /* Assets.xcassets in Resources */,
 				002702751D1BB4BC008D394B /* Main.storyboard in Resources */,
@@ -340,6 +357,7 @@
 				002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */,
 				0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */,
 				0027026C1D1BB4BC008D394B /* main.m in Sources */,
+				002702EF1D1C3471008D394B /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

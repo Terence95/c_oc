@@ -61,8 +61,11 @@
 //        _passwordtext.backgroundColor = [UIColor redColor];
         _passwordtext.placeholder = @"请填写密码";
         [_passwordtext setFont:[UIFont systemFontOfSize:14.f]];
-        _passwordtext.textAlignment = NSTextAlignmentCenter;
+        _passwordtext.textAlignment = NSTextAlignmentLeft;
         [_passwordtext setSecureTextEntry:YES];
+        _passwordtext.clearButtonMode = YES;
+        _passwordtext.returnKeyType = UIReturnKeyDone;
+        _passwordtext.delegate = self;
         
     }
     return _passwordtext;
@@ -75,6 +78,7 @@
         _passwordlabel.text = @"密码:";
         [_passwordlabel setFont:[UIFont systemFontOfSize:15.f]];
         _passwordlabel.textAlignment = NSTextAlignmentCenter;
+        
     }
     
     return _passwordlabel;
@@ -154,12 +158,7 @@
     return _morebtn;
 }
 
-//-(SecondViewController*)sec{
-//    if (_sec == nil) {
-//        _sec = [[SecondViewController alloc] init];
-//    }
-//    return _sec;
-//}
+
 
 //button的点击事件
 -(void)btnClicked:(id)sender{
@@ -167,7 +166,7 @@
         UIButton *btn = (UIButton*)sender;
         switch (btn.tag) {
             case 3000:
-                NSLog(@"i have been clicked");
+//                NSLog(@"i have been clicked");
                 [self.navigationController pushViewController:[SecondViewController alloc] animated:YES];
                 break;
                 
@@ -178,6 +177,14 @@
         
     }
 }
+
+
+#pragma mark-UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 
 @end

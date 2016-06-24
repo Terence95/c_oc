@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 
 @property(nonatomic, retain)UITextView* textView;
+@property(nonatomic, retain)UILabel* label;
+@property(nonatomic, retain)UIButton* button;
 
 @end
 
