@@ -119,6 +119,10 @@
         _perlogo = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-70)/2, 90, 70, 70)];
         _perlogo.backgroundColor = [UIColor colorWithRed:0.974 green:0.374 blue:0.459 alpha:1];
         [_perlogo setImage:[UIImage imageNamed:@"img.png"]];
+        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgClicked:)];
+        [_perlogo addGestureRecognizer:tap];
+        _perlogo.userInteractionEnabled = YES;
+        
     }
     return _perlogo;
 }
@@ -132,6 +136,8 @@
     }
     return _usernamelabel;
 }
+
+
 
 -(UIButton*)question{
     if (_question == nil) {
@@ -178,6 +184,9 @@
     }
 }
 
+-(void)imgClicked:(id)sender{
+    NSLog(@"头像被点击");
+}
 
 #pragma mark-UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
