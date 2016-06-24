@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0008A7641D1CF88700C79AA4 /* ContantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0008A7631D1CF88700C79AA4 /* ContantViewController.m */; };
+		0008A7671D1CF89600C79AA4 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0008A7661D1CF89600C79AA4 /* FindViewController.m */; };
+		0008A76A1D1CF8C300C79AA4 /* MindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0008A7691D1CF8C300C79AA4 /* MindViewController.m */; };
 		0027026C1D1BB4BC008D394B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027026B1D1BB4BC008D394B /* main.m */; };
 		0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027026E1D1BB4BC008D394B /* AppDelegate.m */; };
 		002702721D1BB4BC008D394B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702711D1BB4BC008D394B /* ViewController.m */; };
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0008A7621D1CF88700C79AA4 /* ContantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContantViewController.h; sourceTree = "<group>"; };
+		0008A7631D1CF88700C79AA4 /* ContantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContantViewController.m; sourceTree = "<group>"; };
+		0008A7651D1CF89600C79AA4 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		0008A7661D1CF89600C79AA4 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		0008A7681D1CF8C300C79AA4 /* MindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindViewController.h; sourceTree = "<group>"; };
+		0008A7691D1CF8C300C79AA4 /* MindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindViewController.m; sourceTree = "<group>"; };
 		002702671D1BB4BC008D394B /* WeixinLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeixinLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0027026B1D1BB4BC008D394B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0027026D1D1BB4BC008D394B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,8 +195,14 @@
 				002702A31D1BB57E008D394B /* WXLoginViewController.m */,
 				002702A91D1BD79C008D394B /* SecondViewController.h */,
 				002702AA1D1BD79C008D394B /* SecondViewController.m */,
+				0008A7621D1CF88700C79AA4 /* ContantViewController.h */,
+				0008A7631D1CF88700C79AA4 /* ContantViewController.m */,
 				002702ED1D1C3471008D394B /* HomeViewController.h */,
 				002702EE1D1C3471008D394B /* HomeViewController.m */,
+				0008A7651D1CF89600C79AA4 /* FindViewController.h */,
+				0008A7661D1CF89600C79AA4 /* FindViewController.m */,
+				0008A7681D1CF8C300C79AA4 /* MindViewController.h */,
+				0008A7691D1CF8C300C79AA4 /* MindViewController.m */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -357,7 +372,10 @@
 				002702A41D1BB57E008D394B /* WXLoginViewController.m in Sources */,
 				0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */,
 				0027026C1D1BB4BC008D394B /* main.m in Sources */,
+				0008A7641D1CF88700C79AA4 /* ContantViewController.m in Sources */,
 				002702EF1D1C3471008D394B /* HomeViewController.m in Sources */,
+				0008A76A1D1CF8C300C79AA4 /* MindViewController.m in Sources */,
+				0008A7671D1CF89600C79AA4 /* FindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +609,7 @@
 				002702961D1BB4BC008D394B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		002702971D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLoginTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +618,7 @@
 				002702991D1BB4BC008D394B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0027029A1D1BB4BC008D394B /* Build configuration list for PBXNativeTarget "WeixinLoginUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +627,7 @@
 				0027029C1D1BB4BC008D394B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

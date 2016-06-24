@@ -11,6 +11,7 @@
 @interface SecondViewController () <UITextFieldDelegate> //代理
 
 @property(nonatomic, strong)UITextField* userNameField;
+@property(nonatomic, strong)UISlider* sliderview;
 
 @end
 
@@ -21,12 +22,16 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Contact";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardDidHideNotification object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self initUI];
     [self.view addSubview:self.userNameField];
+    [self.view addSubview:self.sliderview];
 }
 
 
@@ -56,7 +61,7 @@
 
 -(UITextField*)userNameField{
     if (_userNameField == nil) {
-        _userNameField = [[UITextField alloc] initWithFrame:CGRectMake(100, 300, 200, 44)];
+        _userNameField = [[UITextField alloc] initWithFrame:CGRectMake(100, 50, 200, 44)];
         _userNameField.backgroundColor = [UIColor redColor];
         _userNameField.borderStyle = UITextBorderStyleRoundedRect;
         
@@ -70,6 +75,16 @@
     }
     
     return _userNameField;
+}
+
+-(UISlider*)sliderview{
+    if (_sliderview == nil) {
+        _sliderview = [[UISlider alloc] initWithFrame:CGRectMake(10, 300, 300, 5)];
+        _sliderview.minimumTrackTintColor = [UIColor redColor];
+//        _sliderview.maximumTrackTintColor = [UIColor yellowColor];
+        
+    }
+    return _sliderview;
 }
 
 
@@ -91,6 +106,7 @@
 
 -(void)keyboardWasShown:(NSNotification*) notify{
     CGRect frame = [self.view frame];
+    
     if ([notify.name isEqualToString:UIKeyboardDidShowNotification]) {
         [UIView animateWithDuration:0.3 animations:^{
             self.view.frame = frame;
@@ -110,5 +126,14 @@
 }
 
 
-
+-(void)keyboardWasHidden:(NSNotification*) notify{
+    NSDictionary *info = [notify userInfo];
+    NSValue *aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+    
+    CGSize keyBoardSize = [aValue CGRectValue].size;
+    
+    CGRect rect = self.userNameField.frame;
+    rect.origin.y = self.view.frame.size.height - rect.size.height;
+    self.userNameField.frame = rect;
+}
 @end
