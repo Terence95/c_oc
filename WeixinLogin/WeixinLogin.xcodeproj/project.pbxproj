@@ -10,6 +10,7 @@
 		0008A7641D1CF88700C79AA4 /* ContantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0008A7631D1CF88700C79AA4 /* ContantViewController.m */; };
 		0008A7671D1CF89600C79AA4 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0008A7661D1CF89600C79AA4 /* FindViewController.m */; };
 		0008A76A1D1CF8C300C79AA4 /* MindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0008A7691D1CF8C300C79AA4 /* MindViewController.m */; };
+		0008A76B1D1CFDE200C79AA4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702AA1D1BD79C008D394B /* SecondViewController.m */; };
 		0027026C1D1BB4BC008D394B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027026B1D1BB4BC008D394B /* main.m */; };
 		0027026F1D1BB4BC008D394B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027026E1D1BB4BC008D394B /* AppDelegate.m */; };
 		002702721D1BB4BC008D394B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002702711D1BB4BC008D394B /* ViewController.m */; };
@@ -383,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0008A76B1D1CFDE200C79AA4 /* SecondViewController.m in Sources */,
 				002702851D1BB4BC008D394B /* WeixinLoginTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@
 
 @property(nonatomic, strong)UITextField* userNameField;
 @property(nonatomic, strong)UISlider* sliderview;
+@property(nonatomic, strong)NSTimer* timer;
 
 @end
 
@@ -32,6 +33,9 @@
     [self initUI];
     [self.view addSubview:self.userNameField];
     [self.view addSubview:self.sliderview];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    [self.timer fire];
+    
 }
 
 
@@ -88,6 +92,16 @@
 }
 
 
+-(NSTimer*)timer{
+    if (_timer == nil) {
+       
+        // 这种方式在timer启动之前要把它加入NSloop中 [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+        _timer = [NSTimer timerWithTimeInterval:1. target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
+//        _timer = [NSTimer ];
+    }
+    return _timer;
+}
+
 
 #pragma mark-UITextFieldDelegate
 - (BOOL)textFieldShouldClear:(UITextField *)textField{
@@ -95,6 +109,7 @@
     NSLog(@"clear been clicked");
     return YES;
 }
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
@@ -135,5 +150,12 @@
     CGRect rect = self.userNameField.frame;
     rect.origin.y = self.view.frame.size.height - rect.size.height;
     self.userNameField.frame = rect;
+}
+
+-(void)runTimer{
+    CGFloat value = self.sliderview.value/self.sliderview.maximumValue;
+    value += .1f;
+    [self.sliderview setValue:value animated:YES];
+//    NSLog(@"111");
 }
 @end
