@@ -11,6 +11,7 @@
 @interface SecondViewController () <UITextFieldDelegate> //代理
 
 @property(nonatomic, strong)UITextField* userNameField;
+@property(nonatomic, strong)UITextField* secNameField;
 @property(nonatomic, strong)UISlider* sliderview;
 @property(nonatomic, strong)NSTimer* timer;
 
@@ -33,6 +34,7 @@
     [self initUI];
     [self.view addSubview:self.userNameField];
     [self.view addSubview:self.sliderview];
+    [self.view addSubview:self.secNameField];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     [self.timer fire];
     
@@ -73,12 +75,28 @@
         _userNameField.keyboardType = UIKeyboardTypeDefault;
         _userNameField.clearButtonMode = YES;
         
-        //
+        // 代理赋值self，这个控件用了代理
         _userNameField.delegate = self;
         
     }
     
     return _userNameField;
+}
+
+-(UITextField*)secNameField{
+    if (_secNameField == nil) {
+        _secNameField = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 200, 44)];
+        _secNameField.backgroundColor = [UIColor yellowColor];
+        _secNameField.borderStyle = UITextBorderStyleRoundedRect;
+        
+        _secNameField.returnKeyType = UIReturnKeyDone;
+        _secNameField.keyboardType = UIKeyboardTypeDefault;
+        _secNameField.clearButtonMode = YES;
+        
+        _secNameField.delegate = self;
+    }
+    
+    return _secNameField;
 }
 
 -(UISlider*)sliderview{
@@ -102,22 +120,6 @@
     return _timer;
 }
 
-
-#pragma mark-UITextFieldDelegate
-- (BOOL)textFieldShouldClear:(UITextField *)textField{
-    // 代理，相当于重写
-    NSLog(@"clear been clicked");
-    return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
-}
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-//    [textField becomeFirstResponder];
-    return YES;
-}
 
 -(void)keyboardWasShown:(NSNotification*) notify{
     CGRect frame = [self.view frame];
@@ -158,4 +160,21 @@
     [self.sliderview setValue:value animated:YES];
 //    NSLog(@"111");
 }
+
+#pragma mark-UITextFieldDelegate
+- (BOOL)textFieldShouldClear:(UITextField *)textField{
+    // 代理，相当于重写
+        NSLog(@"clear been clicked");
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    //    [textField becomeFirstResponder];
+    return YES;
+}
+
 @end
