@@ -19,11 +19,17 @@
 		0008A7F11D1E29D000C79AA4 /* img2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7EC1D1E29D000C79AA4 /* img2.jpeg */; };
 		0008A7F21D1E29D000C79AA4 /* img3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7ED1D1E29D000C79AA4 /* img3.jpeg */; };
 		0008A7F31D1E29D000C79AA4 /* img4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7EE1D1E29D000C79AA4 /* img4.jpeg */; };
-		0008A7F41D1E29D000C79AA4 /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7EF1D1E29D000C79AA4 /* img5.jpg */; };
 		0008A7F61D1E2C6E00C79AA4 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7F51D1E2C6E00C79AA4 /* img.png */; };
 		0008A7FA1D1E2CC600C79AA4 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7F71D1E2CC600C79AA4 /* AppIcon60x60@2x.png */; };
 		0008A7FB1D1E2CC600C79AA4 /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7F81D1E2CC600C79AA4 /* AppIcon60x60@3x.png */; };
 		0008A7FC1D1E2CC600C79AA4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0008A7F91D1E2CC600C79AA4 /* Icon@2x.png */; };
+		0072C8901D202B9600501296 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88A1D202B9600501296 /* AppIcon40x40@2x.png */; };
+		0072C8911D202B9600501296 /* AppIcon40x40@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88B1D202B9600501296 /* AppIcon40x40@2x~ipad.png */; };
+		0072C8921D202B9600501296 /* AppIcon40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88C1D202B9600501296 /* AppIcon40x40@3x.png */; };
+		0072C8931D202B9600501296 /* AppIcon40x40~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88D1D202B9600501296 /* AppIcon40x40~ipad.png */; };
+		0072C8941D202B9600501296 /* AppIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88E1D202B9600501296 /* AppIcon76x76@2x~ipad.png */; };
+		0072C8951D202B9600501296 /* AppIcon76x76~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88F1D202B9600501296 /* AppIcon76x76~ipad.png */; };
+		00944EE81D1E7E26005A5B10 /* img5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00944EE71D1E7E26005A5B10 /* img5.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +70,19 @@
 		0008A7EC1D1E29D000C79AA4 /* img2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpeg; sourceTree = "<group>"; };
 		0008A7ED1D1E29D000C79AA4 /* img3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpeg; sourceTree = "<group>"; };
 		0008A7EE1D1E29D000C79AA4 /* img4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpeg; sourceTree = "<group>"; };
-		0008A7EF1D1E29D000C79AA4 /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
 		0008A7F51D1E2C6E00C79AA4 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 		0008A7F71D1E2CC600C79AA4 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
 		0008A7F81D1E2CC600C79AA4 /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
 		0008A7F91D1E2CC600C79AA4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0072C88A1D202B9600501296 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		0072C88B1D202B9600501296 /* AppIcon40x40@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x~ipad.png"; sourceTree = "<group>"; };
+		0072C88C1D202B9600501296 /* AppIcon40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@3x.png"; sourceTree = "<group>"; };
+		0072C88D1D202B9600501296 /* AppIcon40x40~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40~ipad.png"; sourceTree = "<group>"; };
+		0072C88E1D202B9600501296 /* AppIcon76x76@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x~ipad.png"; sourceTree = "<group>"; };
+		0072C88F1D202B9600501296 /* AppIcon76x76~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76~ipad.png"; sourceTree = "<group>"; };
+		00944EE51D1E7566005A5B10 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		00944EE61D1E770B005A5B10 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		00944EE71D1E7E26005A5B10 /* img5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		0008A7AB1D1E224300C79AA4 = {
 			isa = PBXGroup;
 			children = (
+				00944EE41D1E7558005A5B10 /* Common */,
 				0008A7EA1D1E290200C79AA4 /* Resources */,
 				0008A7B61D1E224300C79AA4 /* ScrollViewDemo */,
 				0008A7D01D1E224300C79AA4 /* ScrollViewDemoTests */,
@@ -120,6 +135,7 @@
 		0008A7B61D1E224300C79AA4 /* ScrollViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				00944EE61D1E770B005A5B10 /* PrefixHeader.pch */,
 				0008A7BA1D1E224300C79AA4 /* AppDelegate.h */,
 				0008A7BB1D1E224300C79AA4 /* AppDelegate.m */,
 				0008A7BD1D1E224300C79AA4 /* ViewController.h */,
@@ -162,6 +178,12 @@
 		0008A7EA1D1E290200C79AA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0072C88A1D202B9600501296 /* AppIcon40x40@2x.png */,
+				0072C88B1D202B9600501296 /* AppIcon40x40@2x~ipad.png */,
+				0072C88C1D202B9600501296 /* AppIcon40x40@3x.png */,
+				0072C88D1D202B9600501296 /* AppIcon40x40~ipad.png */,
+				0072C88E1D202B9600501296 /* AppIcon76x76@2x~ipad.png */,
+				0072C88F1D202B9600501296 /* AppIcon76x76~ipad.png */,
 				0008A7F71D1E2CC600C79AA4 /* AppIcon60x60@2x.png */,
 				0008A7F81D1E2CC600C79AA4 /* AppIcon60x60@3x.png */,
 				0008A7F91D1E2CC600C79AA4 /* Icon@2x.png */,
@@ -170,9 +192,17 @@
 				0008A7EC1D1E29D000C79AA4 /* img2.jpeg */,
 				0008A7ED1D1E29D000C79AA4 /* img3.jpeg */,
 				0008A7EE1D1E29D000C79AA4 /* img4.jpeg */,
-				0008A7EF1D1E29D000C79AA4 /* img5.jpg */,
+				00944EE71D1E7E26005A5B10 /* img5.jpeg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		00944EE41D1E7558005A5B10 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				00944EE51D1E7566005A5B10 /* Common.h */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,16 +310,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0008A7FB1D1E2CC600C79AA4 /* AppIcon60x60@3x.png in Resources */,
+				00944EE81D1E7E26005A5B10 /* img5.jpeg in Resources */,
 				0008A7FC1D1E2CC600C79AA4 /* Icon@2x.png in Resources */,
+				0072C8911D202B9600501296 /* AppIcon40x40@2x~ipad.png in Resources */,
 				0008A7FA1D1E2CC600C79AA4 /* AppIcon60x60@2x.png in Resources */,
 				0008A7F11D1E29D000C79AA4 /* img2.jpeg in Resources */,
-				0008A7F41D1E29D000C79AA4 /* img5.jpg in Resources */,
+				0072C8951D202B9600501296 /* AppIcon76x76~ipad.png in Resources */,
+				0072C8941D202B9600501296 /* AppIcon76x76@2x~ipad.png in Resources */,
 				0008A7F31D1E29D000C79AA4 /* img4.jpeg in Resources */,
+				0072C8901D202B9600501296 /* AppIcon40x40@2x.png in Resources */,
+				0072C8921D202B9600501296 /* AppIcon40x40@3x.png in Resources */,
 				0008A7C71D1E224300C79AA4 /* LaunchScreen.storyboard in Resources */,
 				0008A7C41D1E224300C79AA4 /* Assets.xcassets in Resources */,
 				0008A7C21D1E224300C79AA4 /* Main.storyboard in Resources */,
 				0008A7F61D1E2C6E00C79AA4 /* img.png in Resources */,
 				0008A7F01D1E29D000C79AA4 /* img1.jpeg in Resources */,
+				0072C8931D202B9600501296 /* AppIcon40x40~ipad.png in Resources */,
 				0008A7F21D1E29D000C79AA4 /* img3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +495,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ScrollViewDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = ScrollViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -472,6 +512,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ScrollViewDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = ScrollViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -545,6 +589,7 @@
 				0008A7E31D1E224300C79AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0008A7E41D1E224300C79AA4 /* Build configuration list for PBXNativeTarget "ScrollViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +598,7 @@
 				0008A7E61D1E224300C79AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0008A7E71D1E224300C79AA4 /* Build configuration list for PBXNativeTarget "ScrollViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +607,7 @@
 				0008A7E91D1E224300C79AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

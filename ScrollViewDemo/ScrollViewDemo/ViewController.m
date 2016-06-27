@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property(nonatomic, strong)UIScrollView* scrollview;
+@property(nonatomic, strong)UIPageControl* pageview;
 @end
 
 @implementation ViewController
@@ -36,57 +37,73 @@
 
 -(void)initUI{
     [self.view addSubview:self.scrollview];
+    [self scrollViewWithImage];
+    [self.view addSubview:self.pageview];
+    
 }
 
 -(UIScrollView*)scrollview{
-    if (_scrollview == nil) {
-        _scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 20, 320, 550)];
+    if (!_scrollview) {
+        _scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         
-        // 添加子视图
-//        UIImageView *myimage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 320, 550)];
-//        [_scrollview addSubview:myimage];
-//        myimage.backgroundColor = [UIColor blueColor];
-//        _scrollview.backgroundColor = [UIColor redColor];
-        [_scrollview setContentSize:CGSizeMake(320*5, 240)];
+        // 将垂直的滚动条删了
+        _scrollview.showsVerticalScrollIndicator = NO;
         
-        // 开启滚动分页功能
-        [_scrollview setPagingEnabled:YES];
+        // 水平滚动条设置
+        _scrollview.showsHorizontalScrollIndicator = NO;
         
-        // 隐藏滚动条
-        [_scrollview setShowsVerticalScrollIndicator:NO];
-        [_scrollview setShowsVerticalScrollIndicator:NO];
+        // 分页
+        _scrollview.pagingEnabled = YES;
         
-        [_scrollview setDelegate:self];
+        //
+        _scrollview.contentOffset = CGPointZero;
         
-            // 添加图片按钮
-        UIImageView *imageview1 = [[UIImageView alloc] initWithFrame:CGRectMake(0*320, 0, [UIScreen mainScreen].bounds.size.width, 550)];
-        [imageview1 setImage:[UIImage imageNamed:@"img1.jpeg"]];
-        
-        UIImageView *imageview2 = [[UIImageView alloc] initWithFrame:CGRectMake(1*320, 0, 320, 550)];
-        [imageview2 setImage:[UIImage imageNamed:@"img2.jpeg"]];
-        
-        
-        UIImageView *imageview3 = [[UIImageView alloc] initWithFrame:CGRectMake(2*320, 0, 320, 550)];
-        [imageview3 setImage:[UIImage imageNamed:@"img3.jpeg"]];
-        
-        
-        UIImageView *imageview4 = [[UIImageView alloc] initWithFrame:CGRectMake(3*320, 0, 320, 550)];
-        [imageview4 setImage:[UIImage imageNamed:@"img4.jpeg"]];
-        
-        
-        UIImageView *imageview5 = [[UIImageView alloc] initWithFrame:CGRectMake(4*320, 0, 320, 550)];
-        [imageview5 setImage:[UIImage imageNamed:@"img5.jpg"]];
-        
-        [_scrollview addSubview:imageview1];
-        [_scrollview addSubview:imageview2];
-        [_scrollview addSubview:imageview3];
-        [_scrollview addSubview:imageview4];
-        [_scrollview addSubview:imageview5];
-        
-        
+        _scrollview.delegate = self;
     }
     
     return _scrollview;
+}
+
+// 给scrollview添加图片
+-(void)scrollViewWithImage{
+    
+    self.scrollview.contentSize = CGSizeMake((SCREEN_WIDTH*5), SCREEN_HEIGHT);
+    
+    for (int i = 0; i < 5; i++) {
+        NSString* imageName = [NSString stringWithFormat:@"img%d.jpeg", i+1];
+        UIImageView* imageview = [[UIImageView alloc] initWithFrame:CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        imageview.image = [UIImage imageNamed:imageName];
+        
+        [self.scrollview addSubview:imageview];
+        
+        
+    }
+}
+
+// get pageview
+-(UIPageControl*)pageview{
+    if (!_pageview) {
+        _pageview = [[UIPageControl alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-300)/2, SCREEN_HEIGHT - 44, 300, 30)];
+        _pageview.backgroundColor = [UIColor clearColor];
+        _pageview.numberOfPages = IMAGE_COUNT;
+        _pageview.currentPage = 0;
+        
+    }
+    return _pageview;
+}
+
+
+#pragma mark - UIScrollViewDelegate
+// 计算滑动页码数的代理
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    CGFloat pageWidth = scrollView.frame.size.width;
+    
+    // 计算当前的滑动页码数
+    int page = (int)(floor((scrollView.contentOffset.x - pageWidth/2))/pageWidth+1);
+    
+    self.pageview.currentPage = page;
+    
 }
 
 @end
