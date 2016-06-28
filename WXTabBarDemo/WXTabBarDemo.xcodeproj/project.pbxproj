@@ -57,6 +57,12 @@
 		0063E7891D220CB000CF03CF /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0063E7831D220CB000CF03CF /* AppIcon57x57.png */; };
 		0063E78A1D220CB000CF03CF /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0063E7841D220CB000CF03CF /* AppIcon57x57@2x.png */; };
 		0063E78B1D220CB000CF03CF /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0063E7851D220CB000CF03CF /* AppIcon60x60@2x.png */; };
+		0063E78F1D22153D00CF03CF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063E78E1D22153D00CF03CF /* SettingViewController.m */; };
+		0063E7921D223FFB00CF03CF /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063E7911D223FFB00CF03CF /* HomeTableViewController.m */; };
+		0063E7961D226B5000CF03CF /* EngineInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063E7951D226B5000CF03CF /* EngineInterface.m */; };
+		0063E7991D226B5D00CF03CF /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063E7981D226B5D00CF03CF /* Student.m */; };
+		00C94F211D226F2A0025B3B9 /* IMG_0155.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 00C94F1F1D226F2A0025B3B9 /* IMG_0155.JPG */; };
+		00C94F221D226F2A0025B3B9 /* IMG_2368.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 00C94F201D226F2A0025B3B9 /* IMG_2368.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +149,16 @@
 		0063E7831D220CB000CF03CF /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
 		0063E7841D220CB000CF03CF /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
 		0063E7851D220CB000CF03CF /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		0063E78D1D22153D00CF03CF /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		0063E78E1D22153D00CF03CF /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		0063E7901D223FFB00CF03CF /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		0063E7911D223FFB00CF03CF /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		0063E7941D226B5000CF03CF /* EngineInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineInterface.h; sourceTree = "<group>"; };
+		0063E7951D226B5000CF03CF /* EngineInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineInterface.m; sourceTree = "<group>"; };
+		0063E7971D226B5D00CF03CF /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		0063E7981D226B5D00CF03CF /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		00C94F1F1D226F2A0025B3B9 /* IMG_0155.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0155.JPG; sourceTree = "<group>"; };
+		00C94F201D226F2A0025B3B9 /* IMG_2368.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2368.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +189,7 @@
 		001F9CA41D21247100885558 = {
 			isa = PBXGroup;
 			children = (
+				0063E7931D226B2500CF03CF /* Engine */,
 				0063E77C1D22048D00CF03CF /* Basic */,
 				001F9D291D216A2B00885558 /* Resources */,
 				001F9D141D2159A000885558 /* Class */,
@@ -270,6 +287,7 @@
 		001F9D141D2159A000885558 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0063E78C1D2214F800CF03CF /* SubViewControllers */,
 				001F9D151D2159A000885558 /* UIViewControllers */,
 				001F9D161D2159A000885558 /* UIViews */,
 			);
@@ -303,6 +321,8 @@
 		001F9D291D216A2B00885558 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				00C94F1F1D226F2A0025B3B9 /* IMG_0155.JPG */,
+				00C94F201D226F2A0025B3B9 /* IMG_2368.JPG */,
 				0063E7801D220CB000CF03CF /* AppIcon29x29.png */,
 				0063E7811D220CB000CF03CF /* AppIcon40x40.png */,
 				0063E7821D220CB000CF03CF /* AppIcon40x40@2x.png */,
@@ -328,6 +348,28 @@
 				0063E77E1D2204FB00CF03CF /* BaseViewController.m */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		0063E78C1D2214F800CF03CF /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0063E7901D223FFB00CF03CF /* HomeTableViewController.h */,
+				0063E7911D223FFB00CF03CF /* HomeTableViewController.m */,
+				0063E78D1D22153D00CF03CF /* SettingViewController.h */,
+				0063E78E1D22153D00CF03CF /* SettingViewController.m */,
+			);
+			path = SubViewControllers;
+			sourceTree = "<group>";
+		};
+		0063E7931D226B2500CF03CF /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				0063E7941D226B5000CF03CF /* EngineInterface.h */,
+				0063E7951D226B5000CF03CF /* EngineInterface.m */,
+				0063E7971D226B5D00CF03CF /* Student.h */,
+				0063E7981D226B5D00CF03CF /* Student.m */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,9 +504,11 @@
 				001F9D311D216A2B00885558 /* NF_04.jpg in Resources */,
 				001F9D021D21252600885558 /* tabbar_discover.png in Resources */,
 				001F9CFD1D21252500885558 /* tabbar_contacts@2x.png in Resources */,
+				00C94F211D226F2A0025B3B9 /* IMG_0155.JPG in Resources */,
 				001F9D091D21252600885558 /* tabbar_mainframe@2x.png in Resources */,
 				001F9D011D21252600885558 /* tabbar_contactsHL@3x.png in Resources */,
 				001F9D061D21252600885558 /* tabbar_discoverHL@2x.png in Resources */,
+				00C94F221D226F2A0025B3B9 /* IMG_2368.JPG in Resources */,
 				001F9D0C1D21252600885558 /* tabbar_mainframeHL@2x.png in Resources */,
 				0063E7861D220CB000CF03CF /* AppIcon29x29.png in Resources */,
 				001F9D301D216A2B00885558 /* NF_03.jpg in Resources */,
@@ -496,9 +540,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				001F9D191D215A3800885558 /* TabBarViewController.m in Sources */,
+				0063E7921D223FFB00CF03CF /* HomeTableViewController.m in Sources */,
+				0063E7991D226B5D00CF03CF /* Student.m in Sources */,
 				001F9CB81D21247100885558 /* ViewController.m in Sources */,
 				0063E77F1D2204FB00CF03CF /* BaseViewController.m in Sources */,
 				001F9CB51D21247100885558 /* AppDelegate.m in Sources */,
+				0063E7961D226B5000CF03CF /* EngineInterface.m in Sources */,
 				001F9D1C1D215A4700885558 /* HomeViewController.m in Sources */,
 				001F9D1F1D215A5C00885558 /* ContantViewController.m in Sources */,
 				001F9CB21D21247100885558 /* main.m in Sources */,
@@ -506,6 +553,7 @@
 				004983C41D217314000C832E /* NavigationController.m in Sources */,
 				001F9D251D215A7F00885558 /* MineViewController.m in Sources */,
 				001F9D281D215C4500885558 /* GuideViewController.m in Sources */,
+				0063E78F1D22153D00CF03CF /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

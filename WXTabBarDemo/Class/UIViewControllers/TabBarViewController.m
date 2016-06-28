@@ -27,22 +27,46 @@
     [self initTabBarCtrls];
 }
 
+
+/**
+ *  初始化一级控制器
+ */
 -(void)initTabBarCtrls{
     HomeViewController* home = [[HomeViewController alloc] init];
-    [self initTabBarWithViewController:home title:@"Wechat" image:@"tabbar_mainframe.png"  selectedImg:@"tabbar_mainframeHL.png"];
+    [self initTabBarWithViewController:home title:@"微信" image:@"tabbar_mainframe.png"  selectedImg:@"tabbar_mainframeHL.png"];
+     home.tabBarItem.badgeValue = @"99+";
     
     ContantViewController* contant = [[ContantViewController alloc] init];
-    [self initTabBarWithViewController:contant title:@"contant" image:@"tabbar_contacts.png" selectedImg:@"tabbar_contactsHL.png"];
-    
+    [self initTabBarWithViewController:contant title:@"通讯录" image:@"tabbar_contacts.png" selectedImg:@"tabbar_contactsHL.png"];
+     contant.tabBarItem.badgeValue = @"99+";
     
     FindViewController* find = [[FindViewController alloc] init];
-    [self initTabBarWithViewController:find title:@"find" image:@"tabbar_discover.png" selectedImg:@"tabbar_discoverHL.png"];
+    [self initTabBarWithViewController:find title:@"发现" image:@"tabbar_discover.png" selectedImg:@"tabbar_discoverHL.png"];
+     find.tabBarItem.badgeValue = @"99+";
     
     MineViewController* mine = [[MineViewController alloc] init];
-    [self initTabBarWithViewController:mine title:@"wo" image:@"tabbar_me.png" selectedImg:@"tabbar_meHL.png"];
+    [self initTabBarWithViewController:mine title:@"我" image:@"tabbar_me.png" selectedImg:@"tabbar_meHL.png"];
+    
+    
+    CGFloat version = [[UIDevice currentDevice].systemVersion floatValue];
+    
+    if (version>8.0) {
+        UIUserNotificationSettings* setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+        
+        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+    }
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 999;
 }
 
-
+/**
+ *  构建tabbarview
+ *
+ *  @param vc                <#vc description#>
+ *  @param title             <#title description#>
+ *  @param imageName         <#imageName description#>
+ *  @param selectedImageName <#selectedImageName description#>
+ */
 -(void)initTabBarWithViewController:(UIViewController*)vc title:(NSString*)title image:(NSString*)imageName selectedImg:(NSString*)selectedImageName{
     //1.取消系统自带的渲染模式
     vc.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -61,15 +85,6 @@
     vc.title = title;
     
     [self addChildViewController:navi];
-    
-}
-
--(void)initViewControllers{
-    
-}
-
-
--(void)buildTabBarWithController:(UIViewController*)viewController{
     
 }
 

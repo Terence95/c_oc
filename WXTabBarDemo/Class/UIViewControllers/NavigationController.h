@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NavigationController.h"
 @interface NavigationController : UINavigationController
+
+-(void)createNavigationLeftButton:(UIViewController*)viewController;
 
 @end
