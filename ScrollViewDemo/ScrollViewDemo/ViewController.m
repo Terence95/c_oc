@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TabBarViewController.h"
 
 @interface ViewController ()
 @property(nonatomic, strong)UIScrollView* scrollview;
@@ -28,6 +29,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self initUI];
+//    self.navigationController.navigationBarHidden = YES;
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -76,6 +79,18 @@
         
         [self.scrollview addSubview:imageview];
         
+        if (i == (IMAGE_COUNT - 1)) {
+            // uiimage获得点击事件
+            imageview.userInteractionEnabled = YES;
+            
+            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-300)/2, SCREEN_HEIGHT-44-30, 300, 30)];
+            [btn setTitle:@"Welcome" forState:UIControlStateNormal];
+//            btn.backgroundColor = [UIColor blueColor];
+            
+            [btn addTarget:self action:@selector(intoMain) forControlEvents:UIControlEventTouchUpInside];
+            
+            [imageview addSubview:btn];
+        }
         
     }
 }
@@ -92,6 +107,13 @@
     return _pageview;
 }
 
+-(void)intoMain{
+    
+    TabBarViewController* tbvc = [[TabBarViewController alloc] init];
+    [self.navigationController pushViewController:tbvc animated:YES];
+    NSLog(@"aaa");
+    
+}
 
 #pragma mark - UIScrollViewDelegate
 // 计算滑动页码数的代理

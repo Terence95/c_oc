@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 #import "WXLoginViewController.h"
+#import "HomeViewController.h"
+#import "ContantViewController.h"
+#import "FindViewController.h"
+#import "MindViewController.h"
+
 @interface AppDelegate ()
 
 @end

@@ -37,11 +37,6 @@
 }
 
 
-//-(void)rightBarButtonClicked:(id)sender{
-//    if (sender && [sender isKindOfClass:[UIBarButtonItem class]) {
-//        // searchview
-//    }
-//}
 
 
 @end

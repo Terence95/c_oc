@@ -16,6 +16,6 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 // 新功能介绍页有多少张图
-#define IMAGE_COUNT 5;
+#define IMAGE_COUNT 5
 
 #endif /* Common_h */

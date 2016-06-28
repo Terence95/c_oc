@@ -16,9 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    (NSDictionary *) launchOptions{
-        
-    }
+    
     
     return YES;
 }

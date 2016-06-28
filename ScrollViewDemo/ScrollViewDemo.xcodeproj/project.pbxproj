@@ -30,6 +30,7 @@
 		0072C8941D202B9600501296 /* AppIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88E1D202B9600501296 /* AppIcon76x76@2x~ipad.png */; };
 		0072C8951D202B9600501296 /* AppIcon76x76~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88F1D202B9600501296 /* AppIcon76x76~ipad.png */; };
 		00944EE81D1E7E26005A5B10 /* img5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00944EE71D1E7E26005A5B10 /* img5.jpeg */; };
+		00E15FD71D20E9F800DF300F /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E15FD61D20E9F800DF300F /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		00944EE51D1E7566005A5B10 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		00944EE61D1E770B005A5B10 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		00944EE71D1E7E26005A5B10 /* img5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpeg; sourceTree = "<group>"; };
+		00E15FD51D20E9F800DF300F /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		00E15FD61D20E9F800DF300F /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 		0008A7AB1D1E224300C79AA4 = {
 			isa = PBXGroup;
 			children = (
+				00E15FD31D20E9D900DF300F /* Class */,
 				00944EE41D1E7558005A5B10 /* Common */,
 				0008A7EA1D1E290200C79AA4 /* Resources */,
 				0008A7B61D1E224300C79AA4 /* ScrollViewDemo */,
@@ -203,6 +207,23 @@
 				00944EE51D1E7566005A5B10 /* Common.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		00E15FD31D20E9D900DF300F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				00E15FD41D20E9D900DF300F /* SrollDemoViewControllers */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		00E15FD41D20E9D900DF300F /* SrollDemoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				00E15FD51D20E9F800DF300F /* TabBarViewController.h */,
+				00E15FD61D20E9F800DF300F /* TabBarViewController.m */,
+			);
+			path = SrollDemoViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E15FD71D20E9F800DF300F /* TabBarViewController.m in Sources */,
 				0008A7BF1D1E224300C79AA4 /* ViewController.m in Sources */,
 				0008A7BC1D1E224300C79AA4 /* AppDelegate.m in Sources */,
 				0008A7B91D1E224300C79AA4 /* main.m in Sources */,
