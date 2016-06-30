@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
+#import "TabBarViewController.h"
+#import "AppDelegate.h"
 
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 #define FRAME_SIZE self.view.frame.size
@@ -233,8 +235,13 @@
     return _login;
 }
 
+
 -(void)loginClicked{
     NSLog(@"loginclicked");
+    TabBarViewController* tabbarvc = [[TabBarViewController alloc] init];
+    AppDelegate* tempdelegate = [UIApplication sharedApplication].delegate;
+    tempdelegate.window.rootViewController = tabbarvc;
+    
 }
 
 
