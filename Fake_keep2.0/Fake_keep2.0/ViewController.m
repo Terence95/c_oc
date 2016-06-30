@@ -113,8 +113,6 @@
     NSError *error = nil;
     [self.avaudioSession setCategory:AVAudioSessionCategoryAmbient error:&error];
     
-    
-    
     NSString *urlStr = [[NSBundle mainBundle]pathForResource:@"1.mp4" ofType:nil];
     
     NSURL *url = [NSURL fileURLWithPath:urlStr];
