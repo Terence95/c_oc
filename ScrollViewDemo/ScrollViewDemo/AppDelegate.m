@@ -16,12 +16,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    
+    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     ViewController* vc = [[ViewController alloc] init];
     
     UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    UIImage* navbg = [UIImage imageNamed:@"background.png"];
+    
+    if (version >= 5.0) {
+        [navi.navigationBar setBackgroundImage:navbg forBarMetrics:UIBarMetricsDefault];
+    }
+    else
+    {
+        [navi.navigationBar insertSubview:[[UIImageView alloc] initWithImage:navbg] atIndex:1];
+    }
     
     self.window.rootViewController = navi;
     

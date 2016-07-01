@@ -62,6 +62,7 @@
         _scrollview.contentOffset = CGPointZero;
         
         _scrollview.delegate = self;
+        
     }
     
     return _scrollview;
@@ -126,6 +127,22 @@
     
     self.pageview.currentPage = page;
     
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"began");
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"ended");
+}
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"Moved");
+}
+
+-(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchCancelled");
 }
 
 @end

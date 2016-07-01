@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class Student;
 @interface EngineInterface : NSObject
 
 +(instancetype)shareInstances;
@@ -16,4 +16,5 @@
 
 -(void)homePageWithArray:(NSArray*)listArray;
 
+-(Student*)homeDetailDataWithIndex:(int)index;
 @end

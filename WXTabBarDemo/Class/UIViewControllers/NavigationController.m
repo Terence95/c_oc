@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.335 green:0.164 blue:0.485 alpha:1];
 }
 
 
@@ -41,7 +42,6 @@
 -(void)createNavigationLeftButton:(UIViewController*)viewController{
     // 如果》0要加左button
     if ([self viewControllers].count > 0) {
-        NSString* leftBtnName = [NSString stringWithFormat:@""];
         
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@""]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnClicked:)];        
     }

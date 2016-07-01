@@ -20,7 +20,6 @@
 
 +(instancetype)shareInstances{
     static EngineInterface* instances = nil;
-    static dispatch_once_t oneToken;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -42,7 +41,7 @@
 }
 
 -(void)homePageWithArray:(NSArray *)listArray{
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 20; i++) {
        
         Student* st = [[Student alloc] init];
         if (i % 2 == 0) {
@@ -51,7 +50,7 @@
             st.imageName = @"IMG_2368.JPG";
         }
         
-        st.name = @"terence";
+        st.name = [NSString stringWithFormat:@"ter%d", i];
         
         st.age = 21;
         
@@ -68,5 +67,16 @@
     return self.studentArray;
 }
 
+
+// 定义一个接口，返回的是具体index的 对象
+-(Student*)homeDetailDataWithIndex:(int)index{
+    
+    if (index >=0 && index < self.studentArray.count) {
+        return [self.studentArray objectAtIndex:index];
+    }else{
+        return nil;
+    }
+    
+}
 
 @end

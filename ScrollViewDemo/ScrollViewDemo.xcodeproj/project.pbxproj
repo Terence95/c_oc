@@ -30,6 +30,12 @@
 		0072C8941D202B9600501296 /* AppIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88E1D202B9600501296 /* AppIcon76x76@2x~ipad.png */; };
 		0072C8951D202B9600501296 /* AppIcon76x76~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0072C88F1D202B9600501296 /* AppIcon76x76~ipad.png */; };
 		00944EE81D1E7E26005A5B10 /* img5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00944EE71D1E7E26005A5B10 /* img5.jpeg */; };
+		00C950051D23B6C40025B3B9 /* progresshud_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C950041D23B6C40025B3B9 /* progresshud_background@2x.png */; };
+		00C9500A1D23B7150025B3B9 /* navigationbar_background_os7.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C950061D23B7150025B3B9 /* navigationbar_background_os7.png */; };
+		00C9500B1D23B7150025B3B9 /* navigationbar_background_os7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C950071D23B7150025B3B9 /* navigationbar_background_os7@2x.png */; };
+		00C9500C1D23B7150025B3B9 /* navigationbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C950081D23B7150025B3B9 /* navigationbar_background.png */; };
+		00C9500D1D23B7150025B3B9 /* navigationbar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C950091D23B7150025B3B9 /* navigationbar_background@2x.png */; };
+		00C9500F1D23BE1A0025B3B9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C9500E1D23BE1A0025B3B9 /* background.png */; };
 		00E15FD71D20E9F800DF300F /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E15FD61D20E9F800DF300F /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +90,12 @@
 		00944EE51D1E7566005A5B10 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		00944EE61D1E770B005A5B10 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		00944EE71D1E7E26005A5B10 /* img5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpeg; sourceTree = "<group>"; };
+		00C950041D23B6C40025B3B9 /* progresshud_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progresshud_background@2x.png"; sourceTree = "<group>"; };
+		00C950061D23B7150025B3B9 /* navigationbar_background_os7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_background_os7.png; sourceTree = "<group>"; };
+		00C950071D23B7150025B3B9 /* navigationbar_background_os7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_background_os7@2x.png"; sourceTree = "<group>"; };
+		00C950081D23B7150025B3B9 /* navigationbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_background.png; sourceTree = "<group>"; };
+		00C950091D23B7150025B3B9 /* navigationbar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_background@2x.png"; sourceTree = "<group>"; };
+		00C9500E1D23BE1A0025B3B9 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		00E15FD51D20E9F800DF300F /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		00E15FD61D20E9F800DF300F /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +194,12 @@
 		0008A7EA1D1E290200C79AA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				00C9500E1D23BE1A0025B3B9 /* background.png */,
+				00C950061D23B7150025B3B9 /* navigationbar_background_os7.png */,
+				00C950071D23B7150025B3B9 /* navigationbar_background_os7@2x.png */,
+				00C950081D23B7150025B3B9 /* navigationbar_background.png */,
+				00C950091D23B7150025B3B9 /* navigationbar_background@2x.png */,
+				00C950041D23B6C40025B3B9 /* progresshud_background@2x.png */,
 				0072C88A1D202B9600501296 /* AppIcon40x40@2x.png */,
 				0072C88B1D202B9600501296 /* AppIcon40x40@2x~ipad.png */,
 				0072C88C1D202B9600501296 /* AppIcon40x40@3x.png */,
@@ -330,15 +348,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C9500B1D23B7150025B3B9 /* navigationbar_background_os7@2x.png in Resources */,
+				00C9500F1D23BE1A0025B3B9 /* background.png in Resources */,
 				0008A7FB1D1E2CC600C79AA4 /* AppIcon60x60@3x.png in Resources */,
 				00944EE81D1E7E26005A5B10 /* img5.jpeg in Resources */,
 				0008A7FC1D1E2CC600C79AA4 /* Icon@2x.png in Resources */,
+				00C9500D1D23B7150025B3B9 /* navigationbar_background@2x.png in Resources */,
+				00C950051D23B6C40025B3B9 /* progresshud_background@2x.png in Resources */,
 				0072C8911D202B9600501296 /* AppIcon40x40@2x~ipad.png in Resources */,
 				0008A7FA1D1E2CC600C79AA4 /* AppIcon60x60@2x.png in Resources */,
 				0008A7F11D1E29D000C79AA4 /* img2.jpeg in Resources */,
 				0072C8951D202B9600501296 /* AppIcon76x76~ipad.png in Resources */,
+				00C9500C1D23B7150025B3B9 /* navigationbar_background.png in Resources */,
 				0072C8941D202B9600501296 /* AppIcon76x76@2x~ipad.png in Resources */,
 				0008A7F31D1E29D000C79AA4 /* img4.jpeg in Resources */,
+				00C9500A1D23B7150025B3B9 /* navigationbar_background_os7.png in Resources */,
 				0072C8901D202B9600501296 /* AppIcon40x40@2x.png in Resources */,
 				0072C8921D202B9600501296 /* AppIcon40x40@3x.png in Resources */,
 				0008A7C71D1E224300C79AA4 /* LaunchScreen.storyboard in Resources */,

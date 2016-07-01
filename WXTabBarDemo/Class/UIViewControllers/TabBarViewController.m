@@ -81,8 +81,19 @@
     
     NavigationController* navi = [[NavigationController alloc] initWithRootViewController:vc];
     
+    [navi.navigationBar setBackgroundImage:[UIImage imageNamed:@"background.png"] forBarMetrics:UIBarMetricsDefault];
     
     vc.title = title;
+    
+    
+    
+    //选择自己喜欢的颜色
+    UIColor * color = [UIColor whiteColor];
+    
+    //这里我们设置的是颜色，还可以设置shadow等，具体可以参见api
+    NSDictionary * dict = [NSDictionary dictionaryWithObject:color forKey:UITextAttributeTextColor];
+    navi.navigationBar.titleTextAttributes = dict;
+    //大功告成
     
     [self addChildViewController:navi];
     
