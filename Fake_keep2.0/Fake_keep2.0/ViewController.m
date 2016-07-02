@@ -133,10 +133,10 @@
 }
 
 //ios以后隐藏状态栏
--(BOOL)prefersStatusBarHidden{
-    
-    return YES;
-}
+//-(BOOL)prefersStatusBarHidden{
+//    
+//    return YES;
+//}
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
