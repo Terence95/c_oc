@@ -217,23 +217,97 @@
 -(AboutMeHeaderView*)aboutmeHeaderView{
     if (!_aboutmeHeaderView) {
         _aboutmeHeaderView = [[AboutMeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 180)];
-        _aboutmeHeaderView.backgroundColor = [UIColor yellowColor];
-//        _aboutmeHeaderView.backgroundColor = [UIColor whiteColor];
+//        _aboutmeHeaderView.backgroundColor = [UIColor yellowColor];
+        _aboutmeHeaderView.backgroundColor = [UIColor whiteColor];
         [_aboutmeHeaderView addSubview:self.devideLine];
         
         UIView* upView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
-        upView.backgroundColor = [UIColor blueColor];
+//        upView.backgroundColor = [UIColor blueColor];
         UIImageView* headlogo = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 70, 70)];
-        UILabel* nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 100, 60)];
+        UILabel* nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 100, 30)];
         [nameLabel setText:@"Terence"];
         headlogo.layer.cornerRadius = 65/2;
         headlogo.layer.masksToBounds=YES;
+        headlogo.layer.borderWidth = 0.4;
         [headlogo setImage:[UIImage imageNamed:@"headlogo.png"]];
+        UIButton* nextbtn = [[UIButton alloc] initWithFrame:CGRectMake(340, (upView.frame.size.height-30)/2, 20, 30)];
+        [nextbtn setImage:[UIImage imageNamed:@"web_next_on.png"] forState:UIControlStateNormal];
         [upView addSubview:headlogo];
         [upView addSubview:nameLabel];
+        [upView addSubview:nextbtn];
+       
+        UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_W, 0.5)];
+        line.backgroundColor = [UIColor colorWithRed:0.909  green:0.921  blue:0.942 alpha:1];
+        [_aboutmeHeaderView addSubview:line];
+        
+        
+        
+        
         
         UIView* downView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_W, 60)];
-        downView.backgroundColor = [UIColor redColor];
+//        downView.backgroundColor = [UIColor redColor];
+        UIButton* btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
+//        btn1.backgroundColor = [UIColor redColor];
+        UIView* downBtnView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
+        [downBtnView1 addSubview:btn1];
+        [downView addSubview:downBtnView1];
+//        downBtnView1.backgroundColor = [UIColor blueColor];
+        UILabel* trends = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, SCREEN_W/3, 20)];
+        
+        [trends setText:@"动态"];
+        trends.textAlignment = NSTextAlignmentCenter;
+        [trends setFont:[UIFont systemFontOfSize:12.f]];
+        
+        UILabel* trendsNumber = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, SCREEN_W/3, 40)];
+        [trendsNumber setText:@"32"];
+        trendsNumber.textAlignment = NSTextAlignmentCenter;
+        [trendsNumber setFont:[UIFont systemFontOfSize:20.f]];
+        [downBtnView1 addSubview:trends];
+        [downBtnView1 addSubview:trendsNumber];
+        
+        
+        
+        UIView* downBtnView2 = [[UIView alloc] initWithFrame:CGRectMake(1*SCREEN_W/3, 0, SCREEN_W/3, 60)];
+        UIButton* btn2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
+        [downView addSubview:downBtnView2];
+        [downBtnView2 addSubview:btn2];
+//        btn2.backgroundColor = [UIColor redColor];
+//        downBtnView2.backgroundColor = [UIColor blueColor];
+        UILabel* focus = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, SCREEN_W/3, 20)];
+        
+        [focus setText:@"关注"];
+        focus.textAlignment = NSTextAlignmentCenter;
+        [focus setFont:[UIFont systemFontOfSize:12.f]];
+        
+        UILabel* focusNumber = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, SCREEN_W/3, 40)];
+        [focusNumber setText:@"6"];
+         focusNumber.textAlignment = NSTextAlignmentCenter;
+        [ focusNumber setFont:[UIFont systemFontOfSize:20.f]];
+        [downBtnView2 addSubview:focus];
+        [downBtnView2 addSubview:focusNumber];
+        
+        
+        UIView* downBtnView3 = [[UIView alloc] initWithFrame:CGRectMake(2*SCREEN_W/3, 0, SCREEN_W/3, 60)];
+        UIButton* btn3 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
+        [downView addSubview:downBtnView3];
+//        btn3.backgroundColor = [UIColor redColor];
+        [downBtnView3 addSubview:btn3];
+        
+//        downBtnView3.backgroundColor = [UIColor blueColor];
+        UILabel* fans = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, SCREEN_W/3, 20)];
+        
+        [fans setText:@"粉丝"];
+        fans.textAlignment = NSTextAlignmentCenter;
+        [fans setFont:[UIFont systemFontOfSize:12.f]];
+        
+        UILabel* fansNumber = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, SCREEN_W/3, 40)];
+        [fansNumber setText:@"6"];
+        fansNumber.textAlignment = NSTextAlignmentCenter;
+        [fansNumber setFont:[UIFont systemFontOfSize:20.f]];
+        [downBtnView3 addSubview:fans];
+        [downBtnView3 addSubview:fansNumber];
+        
+        
         
         [_aboutmeHeaderView addSubview:upView];
         [_aboutmeHeaderView addSubview:downView];
