@@ -14,9 +14,12 @@
 
 @property(nonatomic, strong)UITableView* tableview;
 @property(nonatomic, strong)NSMutableArray* aboutTrain;
+@property(nonatomic, strong)NSMutableArray* aboutTrainImg;
 @property(nonatomic, strong)NSMutableArray* aboutFavourite;
 @property(nonatomic, strong)NSMutableArray* aboutShopping;
 @property(nonatomic, strong)NSMutableArray* aboutMyself;
+
+@property(nonatomic, strong)NSArray* dataArray;
 
 @property(nonatomic, strong)NSMutableArray* titleArray;
 
@@ -40,15 +43,10 @@
     [self initUI];
     [self.view addSubview:self.tableview];
 
-    // uitableview array
-    _aboutTrain = [[NSMutableArray alloc] initWithObjects:@"训练历史", @"训练等级", @"我的徽章",@"跑步等级", nil];
     
-    _aboutFavourite = [[NSMutableArray alloc] initWithObjects:@"我的收藏", nil];
+    _dataArray = @[@[@"me_icon_history.png", @"训练历史"],@[@"u_center_grade.png", @"训练等级"], @[@"u_center_badge.png", @"我的徽章"], @[@"me_icon_runlevel.png", @"跑步等级"], @[@"u_center_collect.png", @"我的收藏"], @[@"shoppingcart_icon.png", @"购物车"], @[@"order.png", @"我的订单"], @[@"u_center_personal.png", @"个人资料"]];
     
-    _aboutShopping = [[NSMutableArray alloc] initWithObjects:@"购物车", @"我的订单", nil];
     
-    _aboutMyself = [[NSMutableArray alloc] initWithObjects:@"个人资料", nil];
-    _titleArray = [[NSMutableArray alloc] initWithObjects:@"abouttrain", @"aboutfavourite", @"aboutshopping", @"aboutmyself", nil];
     
 }
 
@@ -88,23 +86,23 @@
 #pragma -mark UITableViewDelegate
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [_titleArray count];
+    return 4;
 }
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
         case 0:
-            return [_aboutTrain count];
+            return 4;
             break;
         case 1:
-            return [_aboutFavourite count];
+            return 1;
             break;
         case 2:
-            return [_aboutShopping count];
+            return 2;
             break;
         case 3:
-            return [_aboutMyself count];
+            return 1;
             break;
         default:
             return 0;
@@ -114,36 +112,87 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString* CellIndentifier = @"cell";
-    UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIndentifier];
+    
+    
     
     UIFont *newFont = [UIFont fontWithName:@"Arial" size:14.0];
-
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithFrame:CGRectZero];
+    
+    
+    if (indexPath.section == 0) {
+        static NSString* TrainCellIndentifier = @"aboutTraincell";
+        UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:TrainCellIndentifier];
+        if (cell == nil) {
+             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:TrainCellIndentifier];
+        }
+        
         cell.textLabel.font = newFont;
+        NSArray* array = _dataArray[indexPath.row];
+        cell.imageView.image = [UIImage imageNamed:array[0]];
+        cell.textLabel.text=array[1];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        
+        return cell;
+
+        
+    }else if (indexPath.section == 1){
+        static NSString* CollectionCellidentifier = @"aboutCollectioncell";
+        UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CollectionCellidentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CollectionCellidentifier];
+            
+        }
+        
+        cell.textLabel.font = newFont;
+        NSArray* array = _dataArray[4];
+        cell.imageView.image = [UIImage imageNamed:array[0]];
+        cell.textLabel.text=array[1];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        
+        return cell;
+
+    }else if (indexPath.section == 2){
+        static NSString* ShoppingCellidentifier = @"aboutShoppingcell";
+        UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:ShoppingCellidentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ShoppingCellidentifier];
+        }
+        
+        cell.textLabel.font = newFont;
+        
+//        NSArray* array = [[NSArray alloc] initWithObjects:_dataArray[5], _dataArray[6], nil];
+        NSArray* array = _dataArray[(indexPath.row)+5];
+        cell.imageView.image = [UIImage imageNamed:array[0]];
+        cell.textLabel.text=array[1];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        
+        return cell;
+
+    }else if (indexPath.section == 3){
+        static NSString* aboutMeCellidentifier = @"aboutMecell";
+        UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:aboutMeCellidentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:aboutMeCellidentifier];
+        }
+        
+        cell.textLabel.font = newFont;
+        
+        //        NSArray* array = [[NSArray alloc] initWithObjects:_dataArray[5], _dataArray[6], nil];
+        NSArray* array = _dataArray.lastObject;
+        cell.imageView.image = [UIImage imageNamed:array[0]];
+        cell.textLabel.text=array[1];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        
+        return cell;
+
     }
     
-    switch (indexPath.section) {
-        case 0:
-            [[cell textLabel] setText:[_aboutTrain objectAtIndex:indexPath.row]];
-            break;
-        case 1:
-            [[cell textLabel] setText:[_aboutFavourite objectAtIndex:indexPath.row]];
-            break;
-        case 2:
-            [[cell textLabel] setText:[_aboutShopping objectAtIndex:indexPath.row]];
-            break;
-        case 3:
-            [[cell textLabel] setText:[_aboutMyself objectAtIndex:indexPath.row]];
-            break;
-        default:
-            [[cell textLabel]  setText:@"Unknown"];
-            break;
-    }
-    
-    return cell;
+    return nil;
 }
+
 
 // section之间的间隔
 //-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
