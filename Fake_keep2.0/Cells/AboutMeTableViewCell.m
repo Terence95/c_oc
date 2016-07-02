@@ -21,16 +21,6 @@
 
 @implementation AboutMeTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -44,16 +34,19 @@
 -(void)initUI{
     self.contentView.backgroundColor = [UIColor whiteColor];
     
-    UIView* maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 300)];
+    
+    UIView* maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 80)];
     maskView.backgroundColor = [UIColor yellowColor];
     [self.contentView addSubview:maskView];
     
     [maskView addSubview:self.headLogo];
+    [maskView addSubview:self.btnView];
+    
 }
 
 -(UIImageView*)headLogo{
     if (!_headLogo) {
-        _headLogo = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20, 40, 40)];
+        _headLogo = [[UIImageView alloc] initWithFrame:CGRectMake(10, 29, 40, 40)];
         _headLogo.image = [UIImage imageNamed:@"headlogo.png"];
     }
     return _headLogo;
@@ -62,5 +55,14 @@
 -(void)showHomeCell{
     
 }
+
+-(UIView*)btnView{
+    if (!_btnView) {
+        _btnView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.headLogo.frame)+5, 15, 100, 30)];
+        _btnView.backgroundColor = [UIColor blueColor];
+    }
+    return _btnView;
+}
+
 
 @end

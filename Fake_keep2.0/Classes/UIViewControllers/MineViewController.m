@@ -8,7 +8,7 @@
 
 #import "MineViewController.h"
 #import "AboutMeTableViewCell.h"
-//#import "AboutMeHeaderView.h"
+#import "AboutMeHeaderView.h"
 
 
 //屏幕的宽高
@@ -18,10 +18,10 @@
 @interface MineViewController () <UITableViewDelegate, UITableViewDataSource, AboutMeTableViewCellDelegate>
 
 @property(nonatomic, strong)UITableView* tableview;
-
 @property(nonatomic, strong)NSArray* dataArray;
 
-//@property(nonatomic, strong)AboutMeHeaderView* aboutmeHeaderView;
+@property(nonatomic, strong)AboutMeHeaderView* aboutmeHeaderView;
+@property(nonatomic, strong)UIView* devideLine;
 
 @property(nonatomic, strong)UIView* blankView;
 
@@ -44,9 +44,8 @@
     [super viewWillAppear:animated];
     [self initUI];
     [self.view addSubview:self.tableview];
-//    _tableview.tableHeaderView = self.aboutmeHeaderView;
+    _tableview.tableHeaderView = self.aboutmeHeaderView;
 //    [self.view addSubview:self.blankView];
-    
     _dataArray = @[@[@"me_icon_history.png", @"训练历史"],@[@"u_center_grade.png", @"训练等级"], @[@"u_center_badge.png", @"我的徽章"], @[@"me_icon_runlevel.png", @"跑步等级"], @[@"u_center_collect.png", @"我的收藏"], @[@"shoppingcart_icon.png", @"购物车"], @[@"order.png", @"我的订单"], @[@"u_center_personal.png", @"个人资料"]];
     
     
@@ -98,24 +97,22 @@
 #pragma -mark UITableViewDelegate
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 4;
 }
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
         case 0:
-            return 1;
-        case 1:
             return 4;
             break;
-        case 2:
+        case 1:
             return 1;
             break;
-        case 3:
+        case 2:
             return 2;
             break;
-        case 4:
+        case 3:
             return 1;
             break;
         default:
@@ -132,15 +129,6 @@
     UIFont *newFont = [UIFont fontWithName:@"Arial" size:14.0];
     
     if (indexPath.section == 0) {
-        static NSString* aIndentifier = @"aTraincell";
-        AboutMeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:aIndentifier];
-        if (!cell) {
-            cell = [[AboutMeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:aIndentifier];
-            cell.delegate = self;
-        }
-        
-        return cell;
-    }else if (indexPath.section == 1) {
         static NSString* TrainCellIndentifier = @"aboutTraincell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:TrainCellIndentifier];
         if (cell == nil) {
@@ -157,7 +145,7 @@
         return cell;
         
         
-    }else if (indexPath.section == 2){
+    }else if (indexPath.section == 1){
         static NSString* CollectionCellidentifier = @"aboutCollectioncell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CollectionCellidentifier];
         if (cell == nil) {
@@ -174,7 +162,7 @@
         
         return cell;
         
-    }else if (indexPath.section == 3){
+    }else if (indexPath.section == 2){
         static NSString* ShoppingCellidentifier = @"aboutShoppingcell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:ShoppingCellidentifier];
         if (cell == nil) {
@@ -192,7 +180,7 @@
         
         return cell;
         
-    }else if (indexPath.section == 4){
+    }else if (indexPath.section == 3){
         static NSString* aboutMeCellidentifier = @"aboutMecell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:aboutMeCellidentifier];
         if (cell == nil) {
@@ -215,21 +203,44 @@
     return nil;
 }
 
+-(UIView*)devideLine{
+    if (!_devideLine) {
+        _devideLine = [[UIView alloc] initWithFrame:CGRectMake(0, self.aboutmeHeaderView.frame.size.height-20, SCREEN_W, 20)];
+        _devideLine.backgroundColor = [UIColor colorWithRed:0.909  green:0.921  blue:0.942 alpha:1];
+        
+    }
+    return _devideLine;
+}
 
-// section之间的间隔
-//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//   
-//    return 1;
-//}
 
 //initHeaderview
-//-(AboutMeHeaderView*)aboutmeHeaderView{
-//    if (!_aboutmeHeaderView) {
-//        _aboutmeHeaderView = [[AboutMeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 120)];
-//        _aboutmeHeaderView.backgroundColor = [UIColor yellowColor];
-//    }
-//    return _aboutmeHeaderView;
-//}
+-(AboutMeHeaderView*)aboutmeHeaderView{
+    if (!_aboutmeHeaderView) {
+        _aboutmeHeaderView = [[AboutMeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 180)];
+        _aboutmeHeaderView.backgroundColor = [UIColor yellowColor];
+//        _aboutmeHeaderView.backgroundColor = [UIColor whiteColor];
+        [_aboutmeHeaderView addSubview:self.devideLine];
+        
+        UIView* upView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
+        upView.backgroundColor = [UIColor blueColor];
+        UIImageView* headlogo = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 70, 70)];
+        UILabel* nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 100, 60)];
+        [nameLabel setText:@"Terence"];
+        headlogo.layer.cornerRadius = 65/2;
+        headlogo.layer.masksToBounds=YES;
+        [headlogo setImage:[UIImage imageNamed:@"headlogo.png"]];
+        [upView addSubview:headlogo];
+        [upView addSubview:nameLabel];
+        
+        UIView* downView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_W, 60)];
+        downView.backgroundColor = [UIColor redColor];
+        
+        [_aboutmeHeaderView addSubview:upView];
+        [_aboutmeHeaderView addSubview:downView];
+        
+    }
+    return _aboutmeHeaderView;
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == _tableview) {

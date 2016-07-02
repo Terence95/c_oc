@@ -34,14 +34,7 @@
     [self addSubview:self.blankView];
 }
 
--(UIView*)blankView{
-    if (!_blankView) {
-        _blankView = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, SCREEN_W, 10)];
-        _blankView.backgroundColor = [UIColor blueColor];
-    }
-    
-    return _blankView;
-}
+
 
 
 @end
