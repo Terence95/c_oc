@@ -7,10 +7,14 @@
 //
 
 #import "AboutMeTableViewCell.h"
-
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
 @interface AboutMeTableViewCell ()
 
-@property(strong, nonatomic) UIImageView* headLogo;
+@property(nonatomic, strong) UIImageView* headLogo;
+
+@property(nonatomic, strong) UIView* btnView;
+@property(nonatomic, strong) UIButton* trendsBtn;
 
 
 @end
@@ -28,16 +32,35 @@
     // Configure the view for the selected state
 }
 
-
-+(instancetype)GetCellWithTableView:(UITableView*)tableView{
-    static NSString* identifire = @"aboutMeCell";
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    AboutMeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifire];
-    
-    if (!cell) {
-        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    if (self) {
+        [self initUI];
     }
-    return cell;
+    return self;
 }
+
+-(void)initUI{
+    self.contentView.backgroundColor = [UIColor whiteColor];
+    
+    UIView* maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 300)];
+    maskView.backgroundColor = [UIColor yellowColor];
+    [self.contentView addSubview:maskView];
+    
+    [maskView addSubview:self.headLogo];
+}
+
+-(UIImageView*)headLogo{
+    if (!_headLogo) {
+        _headLogo = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20, 40, 40)];
+        _headLogo.image = [UIImage imageNamed:@"headlogo.png"];
+    }
+    return _headLogo;
+}
+
+-(void)showHomeCell{
+    
+}
+
 @end

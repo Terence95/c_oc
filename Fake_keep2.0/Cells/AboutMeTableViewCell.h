@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AboutMeTableViewCellDelegate <NSObject>
+
+@end
+
 @interface AboutMeTableViewCell : UITableViewCell
 
-+(instancetype)GetCellWithTableView:(UITableView*)tableView;
+@property (nonatomic, weak)id<AboutMeTableViewCellDelegate> delegate;
+
+-(void)showHomeCell;
 
 @end

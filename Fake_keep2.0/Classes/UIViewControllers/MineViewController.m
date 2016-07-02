@@ -7,21 +7,23 @@
 //
 
 #import "MineViewController.h"
+#import "AboutMeTableViewCell.h"
+//#import "AboutMeHeaderView.h"
+
+
 //屏幕的宽高
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
-@interface MineViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@interface MineViewController () <UITableViewDelegate, UITableViewDataSource, AboutMeTableViewCellDelegate>
 
 @property(nonatomic, strong)UITableView* tableview;
-@property(nonatomic, strong)NSMutableArray* aboutTrain;
-@property(nonatomic, strong)NSMutableArray* aboutTrainImg;
-@property(nonatomic, strong)NSMutableArray* aboutFavourite;
-@property(nonatomic, strong)NSMutableArray* aboutShopping;
-@property(nonatomic, strong)NSMutableArray* aboutMyself;
 
 @property(nonatomic, strong)NSArray* dataArray;
 
-@property(nonatomic, strong)NSMutableArray* titleArray;
+//@property(nonatomic, strong)AboutMeHeaderView* aboutmeHeaderView;
+
+@property(nonatomic, strong)UIView* blankView;
 
 
 @end
@@ -42,13 +44,23 @@
     [super viewWillAppear:animated];
     [self initUI];
     [self.view addSubview:self.tableview];
-
+//    _tableview.tableHeaderView = self.aboutmeHeaderView;
+//    [self.view addSubview:self.blankView];
     
     _dataArray = @[@[@"me_icon_history.png", @"训练历史"],@[@"u_center_grade.png", @"训练等级"], @[@"u_center_badge.png", @"我的徽章"], @[@"me_icon_runlevel.png", @"跑步等级"], @[@"u_center_collect.png", @"我的收藏"], @[@"shoppingcart_icon.png", @"购物车"], @[@"order.png", @"我的订单"], @[@"u_center_personal.png", @"个人资料"]];
     
     
     
 }
+
+//-(UIView*)blankView{
+//    if (!_blankView) {
+//        _blankView = [[UIView alloc] initWithFrame:CGRectMake(0, self.aboutmeHeaderView.frame.size.height, SCREEN_W, 20)];
+//        _blankView.backgroundColor = [UIColor blueColor];
+//    }
+//    
+//    return _blankView;
+//}
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -86,22 +98,24 @@
 #pragma -mark UITableViewDelegate
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 5;
 }
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
         case 0:
+            return 1;
+        case 1:
             return 4;
             break;
-        case 1:
+        case 2:
             return 1;
             break;
-        case 2:
+        case 3:
             return 2;
             break;
-        case 3:
+        case 4:
             return 1;
             break;
         default:
@@ -117,12 +131,20 @@
     
     UIFont *newFont = [UIFont fontWithName:@"Arial" size:14.0];
     
-    
     if (indexPath.section == 0) {
+        static NSString* aIndentifier = @"aTraincell";
+        AboutMeTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:aIndentifier];
+        if (!cell) {
+            cell = [[AboutMeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:aIndentifier];
+            cell.delegate = self;
+        }
+        
+        return cell;
+    }else if (indexPath.section == 1) {
         static NSString* TrainCellIndentifier = @"aboutTraincell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:TrainCellIndentifier];
         if (cell == nil) {
-             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:TrainCellIndentifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:TrainCellIndentifier];
         }
         
         cell.textLabel.font = newFont;
@@ -133,9 +155,9 @@
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
         return cell;
-
         
-    }else if (indexPath.section == 1){
+        
+    }else if (indexPath.section == 2){
         static NSString* CollectionCellidentifier = @"aboutCollectioncell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CollectionCellidentifier];
         if (cell == nil) {
@@ -151,8 +173,8 @@
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
         return cell;
-
-    }else if (indexPath.section == 2){
+        
+    }else if (indexPath.section == 3){
         static NSString* ShoppingCellidentifier = @"aboutShoppingcell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:ShoppingCellidentifier];
         if (cell == nil) {
@@ -161,7 +183,7 @@
         
         cell.textLabel.font = newFont;
         
-//        NSArray* array = [[NSArray alloc] initWithObjects:_dataArray[5], _dataArray[6], nil];
+        //        NSArray* array = [[NSArray alloc] initWithObjects:_dataArray[5], _dataArray[6], nil];
         NSArray* array = _dataArray[(indexPath.row)+5];
         cell.imageView.image = [UIImage imageNamed:array[0]];
         cell.textLabel.text=array[1];
@@ -169,8 +191,8 @@
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
         return cell;
-
-    }else if (indexPath.section == 3){
+        
+    }else if (indexPath.section == 4){
         static NSString* aboutMeCellidentifier = @"aboutMecell";
         UITableViewCell* cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:aboutMeCellidentifier];
         if (cell == nil) {
@@ -187,7 +209,7 @@
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
         return cell;
-
+        
     }
     
     return nil;
@@ -199,6 +221,27 @@
 //   
 //    return 1;
 //}
+
+//initHeaderview
+//-(AboutMeHeaderView*)aboutmeHeaderView{
+//    if (!_aboutmeHeaderView) {
+//        _aboutmeHeaderView = [[AboutMeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 120)];
+//        _aboutmeHeaderView.backgroundColor = [UIColor yellowColor];
+//    }
+//    return _aboutmeHeaderView;
+//}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == _tableview) {
+        CGFloat sectionHeaderHeight = 36;;
+        if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
+            scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+        } else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
+            scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+        }
+    }
+    return;
+}
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
