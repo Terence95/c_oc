@@ -52,14 +52,6 @@
     
 }
 
-//-(UIView*)blankView{
-//    if (!_blankView) {
-//        _blankView = [[UIView alloc] initWithFrame:CGRectMake(0, self.aboutmeHeaderView.frame.size.height, SCREEN_W, 20)];
-//        _blankView.backgroundColor = [UIColor blueColor];
-//    }
-//    
-//    return _blankView;
-//}
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -217,12 +209,11 @@
 -(AboutMeHeaderView*)aboutmeHeaderView{
     if (!_aboutmeHeaderView) {
         _aboutmeHeaderView = [[AboutMeHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 180)];
-//        _aboutmeHeaderView.backgroundColor = [UIColor yellowColor];
         _aboutmeHeaderView.backgroundColor = [UIColor whiteColor];
         [_aboutmeHeaderView addSubview:self.devideLine];
         
+        // 上半部分包含头像等 名字信息
         UIView* upView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
-//        upView.backgroundColor = [UIColor blueColor];
         UIImageView* headlogo = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 70, 70)];
         UILabel* nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 100, 30)];
         [nameLabel setText:@"Terence"];
@@ -236,6 +227,7 @@
         [upView addSubview:nameLabel];
         [upView addSubview:nextbtn];
        
+        // headerview和下面tableview的分隔线
         UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_W, 0.5)];
         line.backgroundColor = [UIColor colorWithRed:0.909  green:0.921  blue:0.942 alpha:1];
         [_aboutmeHeaderView addSubview:line];
@@ -243,15 +235,12 @@
         
         
         
-        
+        // 下半部分，三个按钮和几个label和
         UIView* downView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_W, 60)];
-//        downView.backgroundColor = [UIColor redColor];
-        UIButton* btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
-//        btn1.backgroundColor = [UIColor redColor];
         UIView* downBtnView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
+        UIButton* btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
         [downBtnView1 addSubview:btn1];
         [downView addSubview:downBtnView1];
-//        downBtnView1.backgroundColor = [UIColor blueColor];
         UILabel* trends = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, SCREEN_W/3, 20)];
         
         [trends setText:@"动态"];
@@ -265,7 +254,7 @@
         [downBtnView1 addSubview:trends];
         [downBtnView1 addSubview:trendsNumber];
         
-        
+        // -------------------这段可以重构，抽取出来---------------------
         
         UIView* downBtnView2 = [[UIView alloc] initWithFrame:CGRectMake(1*SCREEN_W/3, 0, SCREEN_W/3, 60)];
         UIButton* btn2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W/3, 60)];
