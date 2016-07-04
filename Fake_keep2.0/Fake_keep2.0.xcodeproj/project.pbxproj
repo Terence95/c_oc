@@ -145,6 +145,8 @@
 		00D4B6E51D2945A6004F98E0 /* runinkeep.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D4B6DF1D2945A6004F98E0 /* runinkeep.png */; };
 		00D4B6E61D2945A6004F98E0 /* shanghai.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D4B6E01D2945A6004F98E0 /* shanghai.png */; };
 		00D4B6E71D2945A6004F98E0 /* studentkeep.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D4B6E11D2945A6004F98E0 /* studentkeep.png */; };
+		00D4B7321D2A9494004F98E0 /* DiscoverInfoColum.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D4B7311D2A9494004F98E0 /* DiscoverInfoColum.m */; };
+		00D4B7351D2A98B3004F98E0 /* DiscoverCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D4B7341D2A98B3004F98E0 /* DiscoverCollectionViewCell.m */; };
 		00FF08641D24030B00DE447F /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 00FF084C1D24030B00DE447F /* 1.mp4 */; };
 		00FF08651D24030B00DE447F /* 4_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FF084D1D24030B00DE447F /* 4_circle.png */; };
 		00FF08661D24030B00DE447F /* 4_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FF084E1D24030B00DE447F /* 4_circle@2x.png */; };
@@ -351,6 +353,10 @@
 		00D4B6DF1D2945A6004F98E0 /* runinkeep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runinkeep.png; sourceTree = "<group>"; };
 		00D4B6E01D2945A6004F98E0 /* shanghai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shanghai.png; sourceTree = "<group>"; };
 		00D4B6E11D2945A6004F98E0 /* studentkeep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studentkeep.png; sourceTree = "<group>"; };
+		00D4B7301D2A9494004F98E0 /* DiscoverInfoColum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverInfoColum.h; sourceTree = "<group>"; };
+		00D4B7311D2A9494004F98E0 /* DiscoverInfoColum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverInfoColum.m; sourceTree = "<group>"; };
+		00D4B7331D2A98B3004F98E0 /* DiscoverCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCollectionViewCell.h; sourceTree = "<group>"; };
+		00D4B7341D2A98B3004F98E0 /* DiscoverCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCollectionViewCell.m; sourceTree = "<group>"; };
 		00FF084C1D24030B00DE447F /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		00FF084D1D24030B00DE447F /* 4_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_circle.png; sourceTree = "<group>"; };
 		00FF084E1D24030B00DE447F /* 4_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4_circle@2x.png"; sourceTree = "<group>"; };
@@ -566,6 +572,10 @@
 				00D4B6AD1D2934E5004F98E0 /* focusViewData.m */,
 				00D4B6AF1D29352F004F98E0 /* FocusTableViewCell.h */,
 				00D4B6B01D29352F004F98E0 /* FocusTableViewCell.m */,
+				00D4B7301D2A9494004F98E0 /* DiscoverInfoColum.h */,
+				00D4B7311D2A9494004F98E0 /* DiscoverInfoColum.m */,
+				00D4B7331D2A98B3004F98E0 /* DiscoverCollectionViewCell.h */,
+				00D4B7341D2A98B3004F98E0 /* DiscoverCollectionViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -994,6 +1004,7 @@
 				00A2A8051D24B1670000425D /* DiscoverViewController.m in Sources */,
 				000657EC1D240181006402BC /* ViewController.m in Sources */,
 				00D4B6701D279036004F98E0 /* KeepEngineInterface.m in Sources */,
+				00D4B7321D2A9494004F98E0 /* DiscoverInfoColum.m in Sources */,
 				00A2A8021D24B1530000425D /* TrainViewController.m in Sources */,
 				00D4B6AE1D2934E5004F98E0 /* focusViewData.m in Sources */,
 				00D4B67D1D27AB44004F98E0 /* AboutMeHeaderView.m in Sources */,
@@ -1002,6 +1013,7 @@
 				00D4B6A51D28CD9C004F98E0 /* TeamTableViewCell.m in Sources */,
 				00D4B67A1D27A567004F98E0 /* AboutMeTableViewCell.m in Sources */,
 				00A2A8111D24B2950000425D /* TabBarViewController.m in Sources */,
+				00D4B7351D2A98B3004F98E0 /* DiscoverCollectionViewCell.m in Sources */,
 				000657E61D240181006402BC /* main.m in Sources */,
 				00D4B6B11D29352F004F98E0 /* FocusTableViewCell.m in Sources */,
 			);

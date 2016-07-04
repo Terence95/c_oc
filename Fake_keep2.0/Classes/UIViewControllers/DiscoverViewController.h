@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DiscoverInfoColum.h"
+@interface DiscoverViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+{
+    DiscoverInfoColum* _headerView;
+    NSMutableArray* _cellArray; // collection数据
+}
 
-@interface DiscoverViewController : UIViewController
+@property(nonatomic, strong)UICollectionView* collectionView;
 
 @end

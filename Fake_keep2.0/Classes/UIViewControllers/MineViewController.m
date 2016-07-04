@@ -296,7 +296,8 @@
         [downBtnView3 addSubview:fans];
         [downBtnView3 addSubview:fansNumber];
         
-        
+
+
         
         [_aboutmeHeaderView addSubview:upView];
         [_aboutmeHeaderView addSubview:downView];
