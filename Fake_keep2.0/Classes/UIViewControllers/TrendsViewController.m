@@ -311,7 +311,8 @@
     if ([tableView isEqual:_teamTableView]) {
         return self.dataArray.count;
     }else if ([tableView isEqual:_focusTableView]){
-        return 5;
+        // 这里是写死的数据，正确的方法是动态获得数组的长度        
+        return 4;
     }
     return 0;
 }
