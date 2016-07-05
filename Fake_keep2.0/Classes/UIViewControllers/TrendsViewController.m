@@ -21,7 +21,6 @@
 @property(nonatomic, strong)UIView* titleBtnView;
 @property(nonatomic, strong)UIPageControl* pagecontrol;
 @property(nonatomic, assign)NSInteger currentpage;
-@property(nonatomic, assign) NSTimeInterval uxy_acceptEventInterval;
 
 @property(nonatomic, strong)UITableView* focusTableView;
 @property(nonatomic, strong)UITableView* teamTableView;
@@ -283,13 +282,6 @@
 //        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         
-//        if ((indexPath.row >=0) && (indexPath.row < self.dataArray.count)) {
-//            NSArray* array = _dataArray[indexPath.row];
-//            teamTableViewData* teamdata = [[teamTableViewData alloc] init];
-//            teamdata.imageName = @"1.jpg";
-//            
-//            cell.data = teamdata;
-//        }
         
         return cell;
     }else if ([tableView isEqual:_focusTableView]){

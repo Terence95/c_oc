@@ -16,7 +16,6 @@ static float INFO_height = 260;
 
 @interface DiscoverViewController ()
 
-//@property(nonatomic, strong)NSArray* collectionImg;
 @property(nonatomic, strong)NSArray* dataArray;
 
 @end
@@ -34,16 +33,6 @@ static float INFO_height = 260;
     
     NSArray* imgArray = [NSArray arrayWithObjects:@"scroll1.png", @"scroll2.png", @"scroll3.png", @"scroll4.png", @"scroll5.png", nil];
     [_headerView setArray:imgArray];
-    
-    
-    NSArray* collectionInfo = @[@[@"discover1.png",@"#我要上精选# 自律", @"190", @"200"],
-                                @[@"discover1.png",@"#我要上精选# 自律", @"190", @"200"],
-                                @[@"discover1.png",@"#我要上精选# 自律", @"190", @"200"],
-                                @[@"discover1.png",@"#我要上精选# 自律", @"190", @"200"]];
-    
-//    NSLog(@"%@", collectionInfo);
-    
-//    _cellArray = [collectionInfo mutableCopy];
     
 }
 
