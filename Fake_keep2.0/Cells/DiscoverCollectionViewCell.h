@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "collectionCellData.h"
 @interface DiscoverCollectionViewCell : UICollectionViewCell
 
 @property(nonatomic, strong)UIImageView* imgView;
@@ -19,5 +19,8 @@
 @property(nonatomic, strong)UIImageView* common;
 @property(nonatomic, strong)UILabel* commonNum;
 
+-(void)showDiscoverCollectionCell;
+
+@property(nonatomic, strong)collectionCellData* data;
 
 @end

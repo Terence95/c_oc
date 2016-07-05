@@ -17,11 +17,12 @@
 //@property(nonatomic, strong)
 @property(nonatomic, strong) UILabel* imagNum;
 @property(nonatomic) NSInteger totalNum;
+@property(nonatomic, strong)UIPageControl* pageControl;
 
-//-(void)setArray:(NSArray*)imgArray;
+-(void)setArray:(NSArray*)imgArray;
 
-//-(void)openTimer;
-//-(void)closeTimer;
+-(void)openTimer;
+-(void)closeTimer;
 
 
 
