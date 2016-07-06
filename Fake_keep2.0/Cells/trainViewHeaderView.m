@@ -264,11 +264,12 @@
 
 -(UIView*)classView{
     if (!_classView) {
-        _classView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.downView.frame)+10, SCREEN_W, 240)];
-//        _classView.backgroundColor = [UIColor yellowColor];
+        _classView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.downView.frame)+10, SCREEN_W, 350)];
+        _classView.backgroundColor = [UIColor yellowColor];
         UIView* divisionlineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 25)];
         divisionlineView.backgroundColor = [UIColor colorWithRed:0.910  green:0.922  blue:0.941 alpha:1];
         [_classView addSubview:divisionlineView];
+        
         UILabel* myClassLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_W-100)/2, 0, 100, 30)];
         [myClassLabel setText:@"我的课程表"];
         [myClassLabel setFont:[UIFont systemFontOfSize:13.f]];
@@ -277,9 +278,25 @@
         UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 25, SCREEN_W, 180)];
         [image setImage:[UIImage imageNamed:@"class.png"]];
         
+        
+        UIView* divisionlineView2 = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(image.frame), SCREEN_W, 25)];
+        divisionlineView2.backgroundColor = [UIColor colorWithRed:0.910  green:0.922  blue:0.941 alpha:1];
+//        divisionlineView2.backgroundColor = [UIColor blueColor];
+        [_classView addSubview:divisionlineView2];
+         UILabel* myClassLabel2 = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_W-100)/2, 0, 100, 30)];
+        [myClassLabel2 setText:@"我的训练"];
+        [myClassLabel2 setFont:[UIFont systemFontOfSize:13.f]];
+         myClassLabel2.textAlignment = NSTextAlignmentCenter;
+        [divisionlineView2 addSubview:myClassLabel2];
+        
+        
+        UIImageView* image2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 230, SCREEN_W, 120)];
+        image2.backgroundColor = [UIColor blueColor];
+        [image2 setImage:[UIImage imageNamed:@"class2.png"]];
+        
+        [_classView addSubview:image2];
         [_classView addSubview:image];
         [divisionlineView addSubview: myClassLabel];
-        
         
     }
     

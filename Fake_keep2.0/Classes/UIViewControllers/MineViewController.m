@@ -208,6 +208,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SecondViewController* secVc = [[SecondViewController alloc] init];
     secVc.title = @"secondTitle";
+    secVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:secVc animated:YES];
 
 }
