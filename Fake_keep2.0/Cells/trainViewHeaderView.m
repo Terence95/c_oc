@@ -19,21 +19,26 @@
 
 @property(nonatomic, strong)UILabel* minuteChniese;
 
-@property(nonatomic, strong)UILabel* finish;
-@property(nonatomic, strong)UILabel* finshTime;
-@property(nonatomic, strong)UILabel* finishChinese;
-
-@property(nonatomic, strong)UILabel* total;
-@property(nonatomic, strong)UILabel* totalDay;
-@property(nonatomic, strong)UILabel* dayChinese;
-
-@property(nonatomic, strong)UILabel* title;
-@property(nonatomic, strong)UILabel* number;
-@property(nonatomic, strong)UILabel* chineseChar;
+//@property(nonatomic, strong)UILabel* finish;
+//@property(nonatomic, strong)UILabel* finshTime;
+//@property(nonatomic, strong)UILabel* finishChinese;
+//
+//@property(nonatomic, strong)UILabel* total;
+//@property(nonatomic, strong)UILabel* totalDay;
+//@property(nonatomic, strong)UILabel* dayChinese;
+//
+//@property(nonatomic, strong)UILabel* title;
+//@property(nonatomic, strong)UILabel* number;
+//@property(nonatomic, strong)UILabel* chineseChar;
 
 @property(nonatomic, strong)UIView* upView;
 @property(nonatomic, strong)UIView* middleView;
 @property(nonatomic, strong)UIView* downView;
+
+@property(nonatomic, strong)UIView* lineView;
+
+@property(nonatomic, strong)UIView* classView;
+
 
 @end
 
@@ -55,6 +60,8 @@
     [self addSubview:self.upView];
     [self addSubview:self.middleView];
     [self addSubview:self.downView];
+    [self addSubview:self.lineView];
+    [self addSubview:self.classView];
     [self.upView addSubview:self.totalTrain];
     [self.upView addSubview:self.nextPage];
     [self.upView addSubview:self.minuteNum];
@@ -87,8 +94,31 @@
 
 -(UIView*)downView{
     if (!_downView) {
-        _downView = [[UIView alloc] initWithFrame:CGRectMake(0, 170, SCREEN_W, 60)];
-        _downView.backgroundColor = [UIColor colorWithRed:0.649  green:0.260  blue:0.415 alpha:1];
+        _downView = [[UIView alloc] initWithFrame:CGRectMake(0, 180, SCREEN_W, 60)];
+//        _downView.backgroundColor = [UIColor colorWithRed:0.649  green:0.260  blue:0.415 alpha:1];
+        UILabel* numLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 20, 35, 35)];
+        UILabel* rangeLabel = [[UILabel alloc] initWithFrame:CGRectMake(45, 30, 100, 20)];
+        [rangeLabel setText:@"本月好友排名"];
+        [rangeLabel setTextColor:[UIColor colorWithRed:0.342  green:0.304  blue:0.375 alpha:1]];
+        [rangeLabel setFont:[UIFont systemFontOfSize:12.f]];
+        
+//        numLabel.backgroundColor = [UIColor yellowColor];
+        [numLabel setText:@"1"];
+        [numLabel setFont:[UIFont systemFontOfSize:22.f weight:0.3]];
+        [numLabel setTextColor:[UIColor colorWithRed:0.049  green:0.785  blue:0.531 alpha:1]];
+       
+        
+        UIImageView* headlogo = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_W-65, 20, 35, 35)];
+        headlogo.backgroundColor = [UIColor redColor];
+        [headlogo setImage:[UIImage imageNamed:@"headlogo.png"]];
+        headlogo.layer.cornerRadius = 10.0;
+        headlogo.layer.masksToBounds = YES;
+        headlogo.layer.borderWidth = 1;
+        headlogo.layer.borderColor = [[UIColor colorWithRed:0.049  green:0.785  blue:0.531 alpha:1] CGColor];
+        [_downView addSubview:numLabel];
+        [_downView addSubview:rangeLabel];
+        [_downView addSubview:headlogo];
+        
     }
     return _downView;
 }
@@ -221,6 +251,33 @@
         [bottomView addSubview:chineseLabel];
     }
     return bottomView;
+}
+
+-(UIView*)lineView{
+    if (!_lineView) {
+        _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 175, SCREEN_W, 0.5)];
+        _lineView.backgroundColor = [UIColor colorWithRed:0.909  green:0.921  blue:0.942 alpha:1];
+        
+    }
+    return _lineView;
+}
+
+-(UIView*)classView{
+    if (!_classView) {
+        _classView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.downView.frame)+10, SCREEN_W, 240)];
+        _classView.backgroundColor = [UIColor yellowColor];
+        UIView* divisionlineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 25)];
+        divisionlineView.backgroundColor = [UIColor colorWithRed:0.910  green:0.922  blue:0.941 alpha:1];
+        [_classView addSubview:divisionlineView];
+        UILabel* myClassLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_W-100)/2, 0, 100, 30)];
+        [myClassLabel setText:@"我的课程表"];
+        [myClassLabel setFont:[UIFont systemFontOfSize:13.f]];
+        myClassLabel.textAlignment = NSTextAlignmentCenter;
+        [divisionlineView addSubview: myClassLabel];
+        
+    }
+    
+    return _classView;
 }
 
 @end

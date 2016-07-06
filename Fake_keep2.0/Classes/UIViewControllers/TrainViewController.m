@@ -38,6 +38,7 @@
     [self initUI];
     [self.view addSubview:self.trainTableView];
     _headerview = [[trainViewHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 260)];
+    
 //    _headerview.backgroundColor = [UIColor blueColor];
     self.trainTableView.tableHeaderView = _headerview;
 }
