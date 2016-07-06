@@ -265,7 +265,7 @@
 -(UIView*)classView{
     if (!_classView) {
         _classView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.downView.frame)+10, SCREEN_W, 240)];
-        _classView.backgroundColor = [UIColor yellowColor];
+//        _classView.backgroundColor = [UIColor yellowColor];
         UIView* divisionlineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 25)];
         divisionlineView.backgroundColor = [UIColor colorWithRed:0.910  green:0.922  blue:0.941 alpha:1];
         [_classView addSubview:divisionlineView];
@@ -273,7 +273,13 @@
         [myClassLabel setText:@"我的课程表"];
         [myClassLabel setFont:[UIFont systemFontOfSize:13.f]];
         myClassLabel.textAlignment = NSTextAlignmentCenter;
+        
+        UIImageView* image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 25, SCREEN_W, 180)];
+        [image setImage:[UIImage imageNamed:@"class.png"]];
+        
+        [_classView addSubview:image];
         [divisionlineView addSubview: myClassLabel];
+        
         
     }
     

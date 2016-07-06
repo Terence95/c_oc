@@ -10,6 +10,7 @@
 #import "TeamTableViewCell.h"
 #import "teamTableViewData.h"
 #import "FocusTableViewCell.h"
+#import "SecondViewController.h"
 #define FRAME_SIZE self.view.frame.size
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
@@ -299,6 +300,20 @@
     return nil;
 }
 
+#pragma mark-点击
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    if ([tableView isEqual:_focusTableView]) {
+            SecondViewController* secVc = [[SecondViewController alloc] init];
+            secVc.title = @"secondTitle";
+            [self.navigationController pushViewController:secVc animated:YES];
+        
+
+    }
+}
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if ([tableView isEqual:_teamTableView]) {
         return self.dataArray.count;
@@ -318,6 +333,7 @@
     
     return 0;
 }
+
 
 #pragma -mark UITableViewDelegate
 

@@ -180,6 +180,8 @@
 		00D4B6E71D2945A6004F98E0 /* studentkeep.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D4B6E11D2945A6004F98E0 /* studentkeep.png */; };
 		00D4B7321D2A9494004F98E0 /* DiscoverInfoColum.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D4B7311D2A9494004F98E0 /* DiscoverInfoColum.m */; };
 		00D4B7351D2A98B3004F98E0 /* DiscoverCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D4B7341D2A98B3004F98E0 /* DiscoverCollectionViewCell.m */; };
+		00E8D3FE1D2CF84D0070CFC4 /* class.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E8D3FD1D2CF84D0070CFC4 /* class.png */; };
+		00E8D4011D2CF9770070CFC4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E8D4001D2CF9770070CFC4 /* SecondViewController.m */; };
 		00FF08641D24030B00DE447F /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 00FF084C1D24030B00DE447F /* 1.mp4 */; };
 		00FF08651D24030B00DE447F /* 4_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FF084D1D24030B00DE447F /* 4_circle.png */; };
 		00FF08661D24030B00DE447F /* 4_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FF084E1D24030B00DE447F /* 4_circle@2x.png */; };
@@ -425,6 +427,9 @@
 		00D4B7311D2A9494004F98E0 /* DiscoverInfoColum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverInfoColum.m; sourceTree = "<group>"; };
 		00D4B7331D2A98B3004F98E0 /* DiscoverCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCollectionViewCell.h; sourceTree = "<group>"; };
 		00D4B7341D2A98B3004F98E0 /* DiscoverCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCollectionViewCell.m; sourceTree = "<group>"; };
+		00E8D3FD1D2CF84D0070CFC4 /* class.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = class.png; sourceTree = "<group>"; };
+		00E8D3FF1D2CF9770070CFC4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		00E8D4001D2CF9770070CFC4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		00FF084C1D24030B00DE447F /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		00FF084D1D24030B00DE447F /* 4_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_circle.png; sourceTree = "<group>"; };
 		00FF084E1D24030B00DE447F /* 4_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4_circle@2x.png"; sourceTree = "<group>"; };
@@ -581,6 +586,8 @@
 		00A2A7FD1D24B0640000425D /* SubViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				00E8D3FF1D2CF9770070CFC4 /* SecondViewController.h */,
+				00E8D4001D2CF9770070CFC4 /* SecondViewController.m */,
 			);
 			path = SubViewControllers;
 			sourceTree = "<group>";
@@ -655,6 +662,7 @@
 		00FF084B1D24030B00DE447F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				00E8D3FD1D2CF84D0070CFC4 /* class.png */,
 				002217241D2BADBF00D7E40D /* discover2.png */,
 				002217251D2BADBF00D7E40D /* discover3.png */,
 				002217261D2BADBF00D7E40D /* discover4.png */,
@@ -1063,6 +1071,7 @@
 				00D4B65D1D278E7C004F98E0 /* personal_recommend@3x.png in Resources */,
 				00D4B6DA1D2941DC004F98E0 /* reply@2x.png in Resources */,
 				00D4B6BB1D293FEA004F98E0 /* notification_reply.png in Resources */,
+				00E8D3FE1D2CF84D0070CFC4 /* class.png in Resources */,
 				0052057B1D2B46AC00283272 /* topic@3x.png in Resources */,
 				00A744581D2558F300FC4F16 /* add@2x.png in Resources */,
 				005205BF1D2B519F00283272 /* city.png in Resources */,
@@ -1139,6 +1148,7 @@
 				000657EC1D240181006402BC /* ViewController.m in Sources */,
 				00D4B6701D279036004F98E0 /* KeepEngineInterface.m in Sources */,
 				00D4B7321D2A9494004F98E0 /* DiscoverInfoColum.m in Sources */,
+				00E8D4011D2CF9770070CFC4 /* SecondViewController.m in Sources */,
 				00A2A8021D24B1530000425D /* TrainViewController.m in Sources */,
 				00D4B6AE1D2934E5004F98E0 /* focusViewData.m in Sources */,
 				00D4B67D1D27AB44004F98E0 /* AboutMeHeaderView.m in Sources */,

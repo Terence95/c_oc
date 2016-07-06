@@ -9,7 +9,7 @@
 #import "MineViewController.h"
 #import "AboutMeTableViewCell.h"
 #import "AboutMeHeaderView.h"
-
+#import "SecondViewController.h"
 
 //屏幕的宽高
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width
@@ -203,6 +203,15 @@
     }
     return _devideLine;
 }
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SecondViewController* secVc = [[SecondViewController alloc] init];
+    secVc.title = @"secondTitle";
+    [self.navigationController pushViewController:secVc animated:YES];
+
+}
+
 
 
 //initHeaderview
